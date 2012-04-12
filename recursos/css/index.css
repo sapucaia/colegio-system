@@ -1,0 +1,122 @@
+/* 
+    Document   : index
+    Created on : 10/04/2012, 11:51:38
+    Author     : wallace
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/*root { 
+    display: block;
+}*/
+body{
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #f6f6f6;
+/*    text-align: left;*/
+
+}
+
+#tudo{
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+/*    background: #b9b9b9;*/
+    
+    
+}
+
+#titulo{
+    width: 100%;
+    height: 40px;
+    background: coral;
+    padding: 3px;
+/*    position: static;*/
+    
+}
+
+/*#barraLinkSuperior{
+    width: 100%;
+        height: 40px;
+    background: brown;
+    position: static;
+}*/
+
+#bannerSuperior{
+    width: 100%;
+    height: 240px;
+    background: #fefefe;
+}
+
+#barraLinkInferior{
+    width: 100%;
+    height: 80px;
+    background: green;
+}
+
+#conteudo{
+    width: 100%;
+    height: 500px;
+    background: blue;
+}
+
+
+#conteudoEsquerda{
+    width: 75%;
+    height: 100%;
+    background: antiquewhite;
+    float: left;
+}
+
+#conteudoDireita{
+    width: 25%;
+    height: 100%;
+    float: right;
+    background: lightblue;
+}
+
+
+#avisos{
+    width: 100%;
+    height: 25%;
+    background: burlywood;
+}
+
+#aprovados{
+    width: 100%;
+    height: 25%;
+    background: darkgreen;
+}
+
+#responsaveis{
+    width: 100%;
+    height: 25%;
+    background: violet;
+}
+
+#parceirosColegio{
+    width: 100%;
+    height: 25%;
+    background: tomato;
+}
+
+#bannerInferior{
+    width: 100%;
+    height: 150px;
+    background: skyblue;
+}
+
+#rodape{
+    width: 100%;
+    height: 30px;
+    background: sienna;
+}
+
+
