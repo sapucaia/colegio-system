@@ -16,9 +16,9 @@
 }*/
 body{
     width: 100%;
-    height: 100%;
+/*    height: 100%;*/
     overflow: visible;
-    background: #f6f6f6;
+/*    background: #f6f6f6;*/
 /*    text-align: left;*/
 
 }
@@ -55,57 +55,80 @@ body{
     background: #fefefe;
 }
 
-#barraLinkInferior{
-    width: 100%;
-    height: 80px;
-    background: green;
-}
 
 #conteudo{
     width: 100%;
     height: 500px;
-    background: blue;
+    /*    background: blue;*/
+    margin: 0;
+    
 }
 
 
 #conteudoEsquerda{
     width: 75%;
-    height: 100%;
+    height: 98%;
     background: antiquewhite;
     float: left;
+    
 }
 
 #conteudoDireita{
     width: 25%;
     height: 100%;
     float: right;
-    background: lightblue;
+/*    background: lightblue;*/
+    
 }
 
 
 #avisos{
     width: 100%;
     height: 25%;
-    background: burlywood;
+/*    background: burlywood;*/
 }
+
+#avisos h4{
+margin: 0;
+text-align: center;
+}
+
 
 #aprovados{
     width: 100%;
     height: 25%;
-    background: darkgreen;
+/*    background: darkgreen;*/
 }
+
+#aprovados h4{
+margin: 0;
+text-align: center;
+}
+
 
 #responsaveis{
     width: 100%;
     height: 25%;
-    background: violet;
+/*    background: violet;*/
 }
+
+#responsaveis h4{
+margin: 0;
+text-align: center;
+}
+
 
 #parceirosColegio{
     width: 100%;
     height: 25%;
-    background: tomato;
+/*    background: tomato;*/
 }
+
+#parceirosColegio h4{
+margin: 0;
+text-align: center;
+}
+
 
 #bannerInferior{
     width: 100%;
