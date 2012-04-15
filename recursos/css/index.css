@@ -37,10 +37,12 @@ background: #f3f5fc;
     
 #titulo{
     width: 100%;
-    height: 40px;
+    height: 30px;
     background: red;
 /*    padding: 15px;*/
     margin-bottom: 1px;
+    padding-top: 10px;
+    padding-left: 50px;
     
 /*    position: static;*/
     
@@ -48,9 +50,7 @@ background: #f3f5fc;
 
 #titulo a {
     color: #f3f5fc;
-    margin-top: 5px;
-/*    padding-left:50px;
-    padding-top:10px;*/
+    font-weight: 800;   
 }
 
 /*#barraLinkSuperior{
@@ -111,7 +111,7 @@ background: #f3f5fc;
 #avisos{
     width: 100%;
     height: 25%;
-    border-left: solid 1px #2652d6;
+/*    border-left: solid 1px #2652d6;*/
     
     
 }
@@ -120,13 +120,14 @@ background: #f3f5fc;
 margin: 0;
 text-align: center;
 color: #181871;
+background: #c3c3df;
 }
 
 
 #aprovados{
     width: 100%;
     height: 25%;
-    border-left: solid 1px #2652d6;
+/*    border-left: solid 1px #2652d6;*/
     
 /*    background: darkgreen;*/
 }
@@ -135,13 +136,15 @@ color: #181871;
 margin: 0;
 text-align: center;
 color: #181871;
+background: #c3c3df;
+
 }
 
 
 #responsaveis{
     width: 100%;
     height: 25%;
-    border-left: solid 1px #2652d6;
+/*    border-left: solid 1px #2652d6;*/
     
 /*    background: violet;*/
 }
@@ -150,13 +153,15 @@ color: #181871;
 margin: 0;
 text-align: center;
 color: #181871;
+background: #c3c3df;
+
 }
 
 
 #parceirosColegio{
     width: 100%;
     height: 25%;
-    border-left: solid 1px #2652d6;
+/*    border-left: solid 1px #2652d6;*/
     
 /*    background: tomato;*/
 }
@@ -165,6 +170,8 @@ color: #181871;
 margin: 0;
 text-align: center;
 color: #181871;
+background: #c3c3df;
+
 }
 
 

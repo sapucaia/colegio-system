@@ -17,24 +17,9 @@
 
 
 #barraLinkInferior{
-/*    width: 100%;*/
     height: 24px;
-    
     margin: 0;
-
-    position: static;
-/*    padding-left: 2px;*/
-/*    padding-right: 2px;*/
-    
-    
-/*    padding-bottom: 3px;*/
-/*    padding-left: 3px;*/
-/*    padding-right: 3px;*/
-    position: static;
-    
-
-    
-    
-}
+    position: static;   
+}   
 
 
