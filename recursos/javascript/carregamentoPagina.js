@@ -8,7 +8,7 @@
 
 $(function(){
     
-    atribuir("pagina1.html")
+    atribuir("home.html")
     navegar()
 })
 
