@@ -54,8 +54,6 @@ ul.navega li {
     list-style:none;
     display:inline;
     float:left;
-    /*    width:100px;*/
-
     margin:0;
     margin-right: 15px;
     padding:0;
@@ -79,17 +77,15 @@ ul.navega li a{
     padding-right: 5px;
     padding-top: 2px;
     margin: 0;
-/*    padding: 2px;
-
-    padding-bottom: 0;*/
-
-
 }
 
-/*ul.navega li a:hover{
-    background: #d3daee;
-    color: #2652d6;
-}*/
+.sub_menu{
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+}
 
 
 

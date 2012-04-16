@@ -15,37 +15,37 @@
     display: block;
 }*/
 body{
-/*    width: 100%;*/
-/*    height: 100%;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
     overflow: visible;
-/*    background: #f6f6f6;*/
-/*    text-align: left;*/
-background: #f3f5fc;
+    /*    background: #f6f6f6;*/
+    /*    text-align: left;*/
+    background: #f3f5fc;
 
 
 }
 
 #tudo{
     height: 100%;
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-/*    background: #b9b9b9;*/
-    
-    
+    /*    background: #b9b9b9;*/
+
+
 }
-    
+
 #titulo{
     width: 100%;
     height: 30px;
     background: red;
-/*    padding: 15px;*/
+    /*    padding: 15px;*/
     margin-bottom: 1px;
     padding-top: 10px;
     padding-left: 50px;
-    
-/*    position: static;*/
-    
+
+    /*    position: static;*/
+
 }
 
 #titulo a {
@@ -72,24 +72,24 @@ background: #f3f5fc;
     height: 500px;
     /*    background: blue;*/
     margin: 0;
-    
+
 }
 
 
 #conteudoEsquerda{
     width: 75%;
     height: 98%;
-/*    background: antiquewhite;*/
+    /*    background: antiquewhite;*/
     float: left;
-/*    border-right-style: dashed;*/
-/*    border-right-color: #2652d6;    */
+    /*    border-right-style: dashed;*/
+    /*    border-right-color: #2652d6;    */
     z-index: 100;
     margin: 0;
     margin-top: 2px;
     margin-bottom: 2px;
-    
-        
-    
+
+
+
 }
 
 #conteudoDireita{
@@ -100,43 +100,43 @@ background: #f3f5fc;
     margin: 0;
     margin-top: 2px;
     margin-bottom: 2px;
-    
-    
-    
-/*    background: lightblue;*/
-    
+
+
+
+    /*    background: lightblue;*/
+
 }
 
 
 #avisos{
     width: 100%;
     height: 25%;
-/*    border-left: solid 1px #2652d6;*/
-    
-    
+    /*    border-left: solid 1px #2652d6;*/
+
+
 }
 
 #avisos h4{
-margin: 0;
-text-align: center;
-color: #181871;
-background: #c3c3df;
+    margin: 0;
+    text-align: center;
+    color: #181871;
+    background: #c3c3df;
 }
 
 
 #aprovados{
     width: 100%;
     height: 25%;
-/*    border-left: solid 1px #2652d6;*/
-    
-/*    background: darkgreen;*/
+    /*    border-left: solid 1px #2652d6;*/
+
+    /*    background: darkgreen;*/
 }
 
 #aprovados h4{
-margin: 0;
-text-align: center;
-color: #181871;
-background: #c3c3df;
+    margin: 0;
+    text-align: center;
+    color: #181871;
+    background: #c3c3df;
 
 }
 
@@ -144,16 +144,16 @@ background: #c3c3df;
 #responsaveis{
     width: 100%;
     height: 25%;
-/*    border-left: solid 1px #2652d6;*/
-    
-/*    background: violet;*/
+    /*    border-left: solid 1px #2652d6;*/
+
+    /*    background: violet;*/
 }
 
 #responsaveis h4{
-margin: 0;
-text-align: center;
-color: #181871;
-background: #c3c3df;
+    margin: 0;
+    text-align: center;
+    color: #181871;
+    background: #c3c3df;
 
 }
 
@@ -161,16 +161,16 @@ background: #c3c3df;
 #parceirosColegio{
     width: 100%;
     height: 25%;
-/*    border-left: solid 1px #2652d6;*/
-    
-/*    background: tomato;*/
+    /*    border-left: solid 1px #2652d6;*/
+
+    /*    background: tomato;*/
 }
 
 #parceirosColegio h4{
-margin: 0;
-text-align: center;
-color: #181871;
-background: #c3c3df;
+    margin: 0;
+    text-align: center;
+    color: #181871;
+    background: #c3c3df;
 
 }
 
@@ -181,24 +181,24 @@ background: #c3c3df;
     height: 150px;
     background: #2652d6;
     margin: 0;
-/*    margin-bottom: 1px;*/
-    
+    /*    margin-bottom: 1px;*/
+
 }
 
 #rodape{
     width: 100%;
-/*    height: 10px;*/
-/*    background: #2652d6;*/
-background: #951c08;  
+    /*    height: 10px;*/
+    /*    background: #2652d6;*/
+    background: #951c08;  
     margin-bottom: 2px;
-    
+
 }
 
 #rodape a{
     padding-left: 250px;
     color: #e6e6e6;
     font-size: smaller;
-    
+
 
 }
 
