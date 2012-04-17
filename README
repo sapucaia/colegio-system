@@ -1,0 +1,17 @@
+mural de recados - enviar email, salvar no banco
+	remetente
+	destinatario*
+	hora
+	mensagem
+upload de videos - salvar no banco
+  titulo
+  url - youtube
+avisos - salvar no banco
+	data
+	aviso
+contato - enviar email, salvar no banco
+	nome
+	email
+	assunto
+	mensagem
+	
