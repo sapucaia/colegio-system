@@ -11,7 +11,7 @@ $(function(){
         if(menu.length > 0 && menu.is(':hidden')){
             $("#navegaSuperior a").removeClass('ativo');
             $(this).addClass('ativo');
-            $('.subMenu').slideUp();
+            $('.subMenu').slideUp();    
             menu.slideDown();
         }
         if(!submenu.hasClass('subMenu') && menu.length == 0){

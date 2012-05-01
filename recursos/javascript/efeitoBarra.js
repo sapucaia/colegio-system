@@ -9,7 +9,7 @@ $(document).ready(function(){
         $(this).stop().animate({
             "background-color": "#f3f5fc",
             "color": "#2652d6"
-        },1000)
+        },600)
     })
     
     $("#barraLinkSuperior a").mouseout(function(){
@@ -21,11 +21,12 @@ $(document).ready(function(){
     
     
     
+    
     $("#barraLinkInferior a").mouseenter(function(){
         $(this).stop().animate({
             "background-color": "#f3f5fc",
             "color": "#2652d6"
-        },1000)
+        },600)
     })
     
     $("#barraLinkInferior a").mouseout(function(){

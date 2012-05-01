@@ -11,127 +11,72 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
-/*root { 
-    display: block;
-}*/
 
-
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 #barraLinkSuperior{
 
-    /*        height: 35px;*/
-/*        padding-top: 1px;
-        padding-left: 2px;
-        padding-right: 2px;*/
+    background-color: #2652d6;
     height: 26px;
-    /*    background-color: #2652d6;*/
     margin: 0;
     margin-top: 2px;
 
-/*    position: static;*/
-
 }
 
-ul#navegaSuperior{
-
-
-    /*    padding-left: 2px;*/
-    display:block;
-    height:100%;
-    /*    color:#FFF;*/
-    text-decoration:none;
-    /*    border-right:1px solid #FFF;*/
-    background: #2652d6;
-    margin: 0;
-    padding-left: 5px;
-    padding-bottom: 2px;
-
-
-
-}
-
-ul#navegaSuperior li {
+#barraLinkSuperior ul{
     list-style:none;
-    display:inline;
-    float:left;
-/*    margin:0;*/
-    margin-right: 15px;
-/*    padding:0;*/
-    text-align:center;
-/*    padding-top: 2px;*/
+    margin: 0px;
+    padding: 0px;
+}
 
+#barraLinkSuperior ul li {
+    float: left;
+    cursor: pointer;
+    padding: 4px 15px;
+    position: relative;
 
 
 }
 
-ul#navegaSuperior li a{
-    margin: 0;
-    display:block;
-/*    height:100%;*/
+#barraLinkSuperior ul li a {
     color:#FFF;
-    font-family: sans-serif;
     text-decoration:none;
-    font-weight: 700;
     background: #2652d6;
-    padding-left: 5px;
-    padding-right: 2px;
-    padding-top: 5px;
-
+/*width: 100%;*/
 }
 
 ul#navegaSuperior li a:hover, ul#navegaSuperior li a.ativo{
     background:#ccc;
-    
+    display: block;
+
 }
 
-ul#navegaSuperior li ul{
-    display:none;
-    list-style: circle;
+/*ul#barraLinkSuperior li a:hover{
+            color: aqua;
+            background-color: red;
+}*/
+
+#barraLinkSuperior ul li ul {
     position:absolute;
-    /*    top:25px;*/
-    /*    left:0;*/
-    /*    width:460px;*/
     background:#2652d6;
+/*    line-height: 20px;*/
+    top:26px;
+    left:0px;
+    display: none;
+    width: 180px;
 
 }
 
+/*#barraLinkSuperior ul li a ul a{
+    border-bottom: thin #c3c3df;
+}*/
 
-.subMenu{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    /*    visibility: hidden;*/
-}
 
-#navegaSuperior li ul li{
-    float: none;
-    display: inline
-}
+#barraLinkSuperior ul li:hover ul{
+    display: block;
 
-#navegaSuperior li ul li a{
-/*    margin: 0 0 0 5px;*/
-/*    min-width: 180px;*/
-    text-align: left;
-    z-index: 1000;    
-    border: none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    border-bottom: solid thin #205606;
 
 }
-
-/*ul.subMenu li a{
-    margin: 0 0 0 5px;
-        min-width: 180px;
-    text-align: left;
-        z-index: 1000;    
-    border: none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    border-bottom: solid thin #205606;
-}
-
-*/
