@@ -20,7 +20,7 @@ body{
     overflow: visible;
     /*    background: #f6f6f6;*/
     /*    text-align: left;*/
-    background: #f3f5fc;
+    background: #fefefe;
 
 
 }
@@ -38,11 +38,12 @@ body{
 #titulo{
     width: 100%;
     height: 30px;
-    background: red;
+    background: #2652d6;
     /*    padding: 15px;*/
-    margin-bottom: 1px;
+    margin-bottom: 5px;
     padding-top: 10px;
     padding-left: 50px;
+    border-radius: 0.3em;
 
     /*    position: static;*/
 
@@ -64,6 +65,7 @@ body{
     width: 100%;
     height: 240px;
     background: #fefefe;
+    margin-top: 10px;
 }
 
 
@@ -71,7 +73,7 @@ body{
     width: 100%;
     height: 500px;
     /*    background: blue;*/
-    margin: 0;
+    margin-top: 5px;
 
 }
 
@@ -79,10 +81,7 @@ body{
 #conteudoEsquerda{
     width: 75%;
     height: 98%;
-    /*    background: antiquewhite;*/
     float: left;
-    /*    border-right-style: dashed;*/
-    /*    border-right-color: #2652d6;    */
     z-index: 100;
     margin: 0;
     margin-top: 2px;
@@ -100,27 +99,19 @@ body{
     margin: 0;
     margin-top: 2px;
     margin-bottom: 2px;
-
-
-
-    /*    background: lightblue;*/
-
 }
 
 
 #avisos{
     width: 100%;
     height: 25%;
-    /*    border-left: solid 1px #2652d6;*/
-
-
-}
+    }
 
 #avisos h4{
     margin: 0;
     text-align: center;
-    color: #181871;
-    background: #c3c3df;
+    color: #FFF;
+    background: #c43f3f;
 }
 
 
@@ -135,8 +126,9 @@ body{
 #aprovados h4{
     margin: 0;
     text-align: center;
-    color: #181871;
-    background: #c3c3df;
+    color: #FFF;
+/*    background: #c3c3df;*/
+    background: #c43f3f;
 
 }
 
@@ -152,8 +144,10 @@ body{
 #responsaveis h4{
     margin: 0;
     text-align: center;
-    color: #181871;
-    background: #c3c3df;
+    color: #FFF;
+/*    background: #c3c3df
+;*/
+    background: #c43f3f;
 
 }
 
@@ -169,8 +163,9 @@ body{
 #parceirosColegio h4{
     margin: 0;
     text-align: center;
-    color: #181871;
-    background: #c3c3df;
+    color: #FFF;
+    background: #c43f3f;
+/*    background: #c3c3df;*/
 
 }
 
