@@ -16,9 +16,12 @@
 #barraLinkSuperior{
     background: #2652d6;
     height: 32px;
-    border-radius: 0.3em;
-    box-shadow: 5px 7px 3px #bbc1cb;
-    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 5px 5px 5px black;
+    -webkit-box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px black;
+
 }
 
 #nav {
