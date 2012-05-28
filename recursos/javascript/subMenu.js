@@ -13,7 +13,7 @@ $(document).ready(function () {
         }, 
         function () {
             //hide its submenu
-            $('ul', this).slideUp(400);			
+            $('ul', this).stop(true, true).slideUp(400);			
         }
         );
 	
