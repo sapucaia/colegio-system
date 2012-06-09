@@ -2,19 +2,19 @@
 
 require_once 'conf/lock.php';
 	
-class AvisoController extends Controller{
+class RecadoController extends Controller{
 
         function _default(){
-			$avisoRecord = new AvisoRecord();
-			$todos = $avisoRecord->listar();
+			$recadoRecord = new RecadoRecord();
+			$todos = $recadoRecord->listar();
 			$todos = serialize($todos);
-			include('app/views/aviso/index.php');
+			include('app/views/recado/index.php');
         }
         function _error(){
         #echo $this->Command;
         }
         function _novo(){
-			include('app/views/aviso/novo.php');
+			include('app/views/recado/novo.php');
         }
 		
 		function _salvar(){
@@ -22,11 +22,6 @@ class AvisoController extends Controller{
 			foreach($form as $campo){
 				$campo = strip_tags($campo);
 			}
-			$aviso = new Aviso();
-			$aviso->setAviso($form['aviso']);
-			$avisoRecord = new AvisoRecord();
-			$avisoRecord->cadastrar($aviso);
-			
 		}
 		
 		function _mostrar(){

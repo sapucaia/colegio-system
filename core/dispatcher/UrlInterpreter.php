@@ -12,7 +12,11 @@ class URLInterpreter
             $commandArray = array_diff_assoc($requestURI,$scriptName);
             $commandArray = array_values($commandArray);
             $controllerName = $commandArray[0];
-            $controllerFunction = $commandArray[1];
+            if(isset($commandArray[1])){
+				$controllerFunction = $commandArray[1];
+			}else{
+				$controllerFunction = '';
+			}
             $parameters = array_slice($commandArray,2);
 			
             if($controllerName == '')

@@ -29,7 +29,7 @@ class CommandDispatcher
                   {
                   $controllerName = 'error';
                   }
-            include('app/controllers/'.ucfirst($controllerName).'Controller.php');
+            require('app/controllers/'.ucfirst($controllerName).'Controller.php');
             $controllerClass = ucfirst($controllerName)."Controller";
             $controller = new $controllerClass($this->Command);
             $controller->execute();
