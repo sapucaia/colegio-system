@@ -1,35 +1,36 @@
 ﻿<?php
 
-class URLInterpreter
-      {
+class URLInterpreter {
 
-      var $Command;
+    var $Command;
 
-      function URLInterpreter()
-            {
-            $requestURI = explode('/', $_SERVER['REQUEST_URI']);
-            $scriptName = explode('/',$_SERVER['SCRIPT_NAME']);
-            $commandArray = array_diff_assoc($requestURI,$scriptName);
-            $commandArray = array_values($commandArray);
+    function URLInterpreter() {
+        $requestURI = explode('/', $_SERVER['REQUEST_URI']);
+        $scriptName = explode('/', $_SERVER['SCRIPT_NAME']);
+        $commandArray = array_diff_assoc($requestURI, $scriptName);
+        $commandArray = array_values($commandArray);
+        if (isset($commandArray[0])) {
             $controllerName = $commandArray[0];
-            if(isset($commandArray[1])){
-				$controllerFunction = $commandArray[1];
-			}else{
-				$controllerFunction = '';
-			}
-            $parameters = array_slice($commandArray,2);
-			
-            if($controllerName == '')
-                  {
-                  $controllerName = 'root';
-                  }
+        } else {
+            $controllerName = '';
+        }
+        if (isset($commandArray[1])) {
+            $controllerFunction = $commandArray[1];
+        } else {
+            $controllerFunction = '';
+        }
+        $parameters = array_slice($commandArray, 2);
 
-            $this->Command = new Command($controllerName,$controllerFunction,$parameters);
-            }
+        if ($controllerName == '') {
+            $controllerName = 'root';
+        }
 
-      function getCommand()
-            {
-            return $this->Command;
-            }
-      }
+        $this->Command = new Command($controllerName, $controllerFunction, $parameters);
+    }
+
+    function getCommand() {
+        return $this->Command;
+    }
+
+}
 ?>

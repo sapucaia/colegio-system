@@ -6,59 +6,60 @@
  * @author Paavo Soeiro
  */
 class Contato {
-  private $idContato;
-  private $remetente;
-  private $email;
-  private $assunto;
-  private $mensagem;
-  
-  public function __construct($idContato, $remetente, $email, $assunto, $mensagem) {
-    $this->idContato = $idContato;
-    $this->remetente = $remetente;
-    $this->email = $email;
-    $this->assunto = $assunto;
-    $this->mensagem = $mensagem;
-  }
 
-  public function getIdContato() {
-    return $this->idContato;
-  }
+    private $idContato;
+    private $remetente;
+    private $email;
+    private $assunto;
+    private $mensagem;
 
-  public function setIdContato($idContato) {
-    $this->idContato = $idContato;
-  }
+    public function __construct($idContato, $remetente, $email, $assunto, $mensagem) {
+        $this->idContato = $idContato;
+        $this->remetente = $remetente;
+        $this->email = $email;
+        $this->assunto = $assunto;
+        $this->mensagem = $mensagem;
+    }
 
-  public function getRemetente() {
-    return $this->remetente;
-  }
+    public function getIdContato() {
+        return $this->idContato;
+    }
 
-  public function setRemetente($remetente) {
-    $this->remetente = $remetente;
-  }
+    public function setIdContato($idContato) {
+        $this->idContato = $idContato;
+    }
 
-  public function getEmail() {
-    return $this->email;
-  }
+    public function getRemetente() {
+        return $this->remetente;
+    }
 
-  public function setEmail($email) {
-    $this->email = $email;
-  }
+    public function setRemetente($remetente) {
+        $this->remetente = $remetente;
+    }
 
-  public function getAssunto() {
-    return $this->assunto;
-  }
+    public function getEmail() {
+        return $this->email;
+    }
 
-  public function setAssunto($assunto) {
-    $this->assunto = $assunto;
-  }
+    public function setEmail($email) {
+        $this->email = $email;
+    }
 
-  public function getMensagem() {
-    return $this->mensagem;
-  }
+    public function getAssunto() {
+        return $this->assunto;
+    }
 
-  public function setMensagem($mensagem) {
-    $this->mensagem = $mensagem;
-  }
+    public function setAssunto($assunto) {
+        $this->assunto = $assunto;
+    }
+
+    public function getMensagem() {
+        return $this->mensagem;
+    }
+
+    public function setMensagem($mensagem) {
+        $this->mensagem = $mensagem;
+    }
 
 }
 

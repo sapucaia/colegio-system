@@ -1,5 +1,4 @@
 <?php
 
-	echo "<h1>Novo Aviso</h1>";
-
+echo "<h1>Novo Aviso</h1>";
 ?>
