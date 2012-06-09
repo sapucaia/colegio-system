@@ -56,7 +56,7 @@ function __autoload($classe) {
         include_once '../../../app/models/' . $classe . '.class.php';
     }
 
-    elseif (file_exists('../controllers/' . $classe . '.class.php')) {
+    if (file_exists('../controllers/' . $classe . '.class.php')) {
         include_once '../controllers/' . $classe . '.class.php';
     } elseif (file_exists('app/controllers/' . $classe . '.class.php')) {
         include_once 'app/controllers/' . $classe . '.class.php';

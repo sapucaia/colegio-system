@@ -8,10 +8,10 @@
 
     
     //LOCAL    
-    define('DBNAME', 'siscolegio');
-    define('DBPASS', 'siscolegio');
+    define('DBNAME', 'colegio');
+    define('DBPASS', 'colegiosystem');
     define('DBHOST', 'localhost');
-    define('DBUSER', 'siscolegio');
+    define('DBUSER', 'colegio');
     define('DBSGBD', 'postgres');
 
 ?>

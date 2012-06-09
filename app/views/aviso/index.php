@@ -2,11 +2,14 @@
 
 require '../../../conf/lock.php';
 
-$avisoRecord = new AvisoRecord();
+#include '../../controllers/AvisoController.class.php';
+#include '../../controllers/AvisoController.class.php';
 
-$avisos = $avisoRecord->listar();
+$avisos = $_SESSION['todosAvisos'];
 
-foreach ($avisos as $aviso) {
-  echo $aviso->getData() . " - " . $aviso->getAviso() . "<br>";
+print_r($avisos);
+
+foreach($avisos as $aviso){
+	echo $aviso->getData()." - ". $aviso->getAviso();
 }
 ?>
