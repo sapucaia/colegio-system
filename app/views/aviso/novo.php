@@ -1,7 +1,7 @@
 
 
 
-<form action="../../controllers/AvisoController.php" method="post">
+<form action="salvar" method="post">
     <fieldset>
         <label for="aviso">Aviso: <br></label><textarea name="aviso" cols="30" rows="10" maxlength="500"></textarea>
         <input type="submit" value="Cadastrar">
