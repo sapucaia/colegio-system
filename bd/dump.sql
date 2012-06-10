@@ -34,7 +34,7 @@ SET default_with_oids = false;
 
 CREATE TABLE aviso (
     idaviso integer NOT NULL,
-    data time without time zone DEFAULT now() NOT NULL,
+    data timestamp without time zone DEFAULT now() NOT NULL,
     aviso text NOT NULL
 );
 
@@ -106,7 +106,7 @@ CREATE TABLE recado (
     idrecado integer NOT NULL,
     remetente character varying(60) NOT NULL,
     destinatario character varying(60) NOT NULL,
-    data time without time zone DEFAULT now() NOT NULL,
+    data timestamp without time zone DEFAULT now() NOT NULL,
     mensagem text NOT NULL
 );
 
