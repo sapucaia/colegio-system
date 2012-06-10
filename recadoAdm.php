@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,16 +17,13 @@
         <h1>Administração - Avisos </h1>
         <div id="botoes">
             <ul id="btAdministra">
-                <li><a href="app/views/aviso/novo.php">Adcionar avisos</a></li>
-                <li><a href="#">Remover avisos</a></li>
-                <li><a href="app/views/aviso/editar.php">Editar</a></li>
-                <li><a href="app/views/aviso/mostrar.php">Mostrar avisos</a></li>
+                <li><a href="app/views/recado/novo.php">Adcionar recado</a></li>
+                <li><a href="#">Remover recado</a></li>
+                <li><a href="#">Mostrar avisos</a></li>
             </ul>
         </div>
-        <p><a href="adMmenuPrincipal.html">Voltar</a></p>
         <div id="corpo">
             
         </div>
-        
     </body>
 </html>
