@@ -35,7 +35,7 @@
         <div id="barraLinkInferior">
             <ul id="navegaInferior" class="navega" >
                 <li><a href="fotos.html" title="Galeria de fotos">Fotos</a></li>
-                <li><a href="recados.html" title="Recados">Recados</a></li>
+                <li><a href="recados.php" title="Recados">Recados</a></li>
                 <li><a href="videos.html" title="Galeria de v&iacute;deos">V&iacute;deos</a></li>
                 <li><a href="alunos.html" title="Alunos">Alunos</a></li>
             </ul>
