@@ -11,10 +11,10 @@
         <h1>Administração - Avisos </h1>
         <div id="botoes">
             <ul id="btAdministra">
-                <li><a href="app/views/aviso/novo.php">Adcionar avisos</a></li>
-                <li><a href="#">Remover avisos</a></li>
-                <li><a href="app/views/aviso/editar.php">Editar</a></li>
-                <li><a href="app/views/aviso/mostrar.php">Mostrar avisos</a></li>
+                <li><a href="../app/views/aviso/novo.php">Adcionar aviso</a></li>
+                <li><a href="#">Remover aviso</a></li>
+                <li><a href="../app/views/aviso/editar.php">Editar aviso</a></li>
+                <li><a href="../app/views/aviso/mostrar.php">Mostrar avisos</a></li>
             </ul>
         </div>
         <p><a href="../adMmenuPrincipal.html">Voltar</a></p>

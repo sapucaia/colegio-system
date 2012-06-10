@@ -1,7 +1,4 @@
-<?php
-require_once '../../../conf/lock.php';
-$controller = new AvisoController()
-?>
+
 
 
 <form action="../../controllers/AvisoController.php" method="post">
