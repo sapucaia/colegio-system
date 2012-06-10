@@ -3,7 +3,7 @@ $todos = unserialize($todos);
 ?>
 
 
-
+<div class="comandos"><a href="aviso/novo">Novo Aviso</a></div>
 <div>
     <table>
         <thead>
@@ -13,7 +13,7 @@ $todos = unserialize($todos);
         <tbody>
             <?php foreach ($todos as $aviso) { ?>
                 <tr>
-                    <td><?php echo $aviso->getIdAviso() . $aviso->getAviso() . "</a>"; ?></td>
+                    <td><?php echo "<a href=aviso/editar/" . $aviso->getIdAviso() . ">" . $aviso->getAviso() . "</a>"; ?></td>
                     <td><?php echo $aviso->getData(); ?></td>
                 </tr>
             <?php } ?>
