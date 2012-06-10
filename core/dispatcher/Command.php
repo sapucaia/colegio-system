@@ -5,11 +5,13 @@ class Command {
     var $Name = '';
     var $Function = '';
     var $Parameters = array();
+    var $Module;
 
-    function Command($controllerName, $functionName, $parameters) {
+    function Command($controllerName, $functionName, $parameters, $module = null) {
         $this->Parameters = $parameters;
         $this->Name = $controllerName;
         $this->Function = $functionName;
+        $this->Module = $module;
     }
 
     function getControllerName() {
@@ -35,6 +37,16 @@ class Command {
     function setParameters($controllerParameters) {
         $this->Parameters = $controllerParameters;
     }
+    
+    public function getModule() {
+        return $this->Module;
+    }
+
+    public function setModule($Module) {
+        $this->Module = $Module;
+    }
+
+
 
 }
 ?>

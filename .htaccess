@@ -1,8 +1,14 @@
 Options +FollowSymLinks
-IndexIgnore */*
+#IndexIgnore */*
 # Turn on the RewriteEngine
 RewriteEngine On
 #  Rules
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php
+RewriteRule ^admin app/index.php
+RewriteRule ^aviso index.php
+RewriteRule ^recado index.php
+RewriteRule ^video index.php
+RewriteRule ^contato index.php
+RewriteRule ^usuario index.php
+

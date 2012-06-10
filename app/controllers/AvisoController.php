@@ -1,13 +1,25 @@
 ﻿<?php
-require_once 'conf/lock.php';
 
 class AvisoController extends Controller {
 
+    private $PATH;
+
+    function AvisoController(&$command) {
+        parent::__construct($command);
+        if (!$this->Command->getModule() == "admin") {
+            $this->PATH = "app/views/aviso/";
+        } else {
+            $this->PATH = "../app/views/aviso/";
+        }
+    }
+
     function _default() {
+
         $avisoRecord = new AvisoRecord();
         $todos = $avisoRecord->listar();
         $todos = serialize($todos);
-        include('app/views/aviso/index.php');
+
+        include($this->PATH . 'index.php');
     }
 
     function _error() {
@@ -15,7 +27,7 @@ class AvisoController extends Controller {
     }
 
     function _novo() {
-        include('app/views/aviso/novo.php');
+        include($this->PATH . 'novo.php');
     }
 
     function _salvar() {
