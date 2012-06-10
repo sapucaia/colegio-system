@@ -17,9 +17,9 @@
         <h1>Administração - Recados </h1>
         <div id="botoes">
             <ul id="btAdministra">
-                <li><a href="app/views/recado/novo.php">Adcionar recado</a></li>
+               
                 <li><a href="#">Remover recado</a></li>
-                <li><a href="#">Mostrar avisos</a></li>
+                <li><a href="#">Mostrar recado</a></li>
             </ul>
         </div>
         <p><a href="../adMmenuPrincipal.html">Voltar</a></p>

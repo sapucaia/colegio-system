@@ -11,10 +11,8 @@
         <h1>Administração - Contato </h1>
         <div id="botoes">
             <ul id="btAdministra">
-                <li><a href="app/views/aviso/novo.php">Adcionar contato</a></li>
                 <li><a href="#">Remover contato</a></li>
-                <li><a href="app/views/aviso/editar.php">Editar contato</a></li>
-                <li><a href="app/views/aviso/mostrar.php">Mostrar contato</a></li>
+                <li><a href="../app/views/aviso/mostrar.php">Mostrar contato</a></li>
             </ul>
         </div>
         <p><a href="../adMmenuPrincipal.html">Voltar</a></p>
