@@ -9,9 +9,9 @@
     
     //LOCAL    
     define('DBNAME', 'colegio');
-    define('DBPASS', 'melado');
+    define('DBPASS', 'colegiosystem');
     define('DBHOST', 'localhost');
-    define('DBUSER', 'wallaceserverbd');
+    define('DBUSER', 'colegio');
     define('DBSGBD', 'postgres');
 
 ?>

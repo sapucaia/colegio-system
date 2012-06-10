@@ -228,6 +228,33 @@ ALTER TABLE ONLY video
     ADD CONSTRAINT video_pkey PRIMARY KEY (idvideo);
 
 
+CREATE TABLE usuario
+(
+  idusuario serial NOT NULL,
+  nomecompleto character varying(120) NOT NULL,
+  "login" character varying(30) NOT NULL,
+  senha character varying(255) NOT NULL,
+  datacad date NOT NULL DEFAULT now(),
+  tipousuario integer,
+  ultimoacesso timestamp with time zone,
+  CONSTRAINT usuario_pkey PRIMARY KEY (idusuario),
+  CONSTRAINT "login" UNIQUE (login)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE usuario OWNER TO colegio;
+
+-- Index: idx_usuario
+
+-- DROP INDEX idx_usuario;
+
+CREATE INDEX idx_usuario
+  ON usuario
+  USING btree
+  (idusuario);
+
+
 --
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
