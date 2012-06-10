@@ -14,7 +14,7 @@
     </head>
     <body>
 
-        ﻿<?php
+<?php
 require_once('core/dispatcher/Command.php');
 require_once('core/dispatcher/UrlInterpreter.php');
 require_once('core/dispatcher/CommandDispatcher.php');
