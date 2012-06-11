@@ -18,10 +18,12 @@ class LoginController extends Controller {
         $senha = $_POST['senha'];
         $senha = sha1(trim($senha));
         if ($usuario->getSenha() === $senha) {
-            $usuarioRecord->setUltimoAcesso($login);
+            $usuarioRecord->setUltimoAcesso($usuario);
             $_SESSION['usuario'] = serialize($usuario);
+            header('Location: ../admin');
             return true;
         } else {
+            echo 'USUARIO OU SENHA INCORRETOS';
             return false;
         }
     }

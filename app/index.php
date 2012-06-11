@@ -3,11 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href=""/>
-        <script type="text/javascript" src="../recursos/javascript/jquery-1.4.3.min.js"></script>
-        <script type="text/javascript" src="../recursos/javascript/carregamentoPaginaAdm.js"></script>
+        <script type="text/javascript" src="recursos/javascript/jquery-1.4.3.min.js"></script>
+        <script type="text/javascript" src="recursos/javascript/carregamentoPaginaAdm.js"></script>
         <title></title>
     </head>
     <body>
+        <?php include "views/login/login.php"; ?>
         <h1>M&oacute;dulo de administra&ccedil;&atilde;o</h1>
 
         <div id="menuPrincipal">

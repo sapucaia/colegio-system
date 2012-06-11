@@ -56,7 +56,7 @@ final class TRepository {
         $conn = TTransaction::get();
 
         if ($conn) {
-            // executa a consulta no banco de dados            
+            // executa a consulta no banco de dados
             $result = $conn->Execute($sql->getInstruction());
 
             if ($result->FieldCount() > 0) {

@@ -11,4 +11,5 @@ RewriteRule ^recado index.php
 RewriteRule ^video index.php
 RewriteRule ^contato index.php
 RewriteRule ^usuario index.php
+RewriteRule ^login index.php
 
