@@ -1,5 +1,5 @@
 ﻿<?php
-require_once 'conf/lock.php';
+#require_once 'conf/lock.php';
 
 class ContatoController extends Controller {
 

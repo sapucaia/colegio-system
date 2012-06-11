@@ -1,5 +1,5 @@
 ﻿<?php
-require_once 'conf/lock.php';
+#require_once 'conf/lock.php';
 
 class RecadoController extends Controller {
 

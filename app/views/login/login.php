@@ -1,4 +1,4 @@
-<form action="login/login" method="POST">
+<form action="login/logar" method="POST">
     <label for="login">Login</label>
     <input type="text" name="login">
     <label for="senha">Senha</label>
