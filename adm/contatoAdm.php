@@ -15,7 +15,7 @@
                 <li><a href="../app/views/aviso/mostrar.php">Mostrar contato</a></li>
             </ul>
         </div>
-        <p><a href="../adMmenuPrincipal.html">Voltar</a></p>
+        <p><a href="../admMenuPrincipal.html">Voltar</a></p>
         <div id="corpo">
             
         </div>

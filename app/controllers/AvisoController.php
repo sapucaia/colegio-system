@@ -42,14 +42,37 @@ class AvisoController extends Controller {
     }
 
     function _mostrar() {
+        $avisoRecord = new AvisoRecord();
+        $todos = $avisoRecord->listar();
+        $todos = serialize($todos);
         include('app/views/aviso/mostrar.php');
     }
 
-    function _editar() {
-        include('app/views/aviso/editar.php');
+      function _editar() {
+        $avisoRecord = new AvisoRecord;
+        $aux = $this->Command->getParameters();
+        $objeto = $avisoRecord->getAviso($aux[0]);
+        $objeto = serialize($objeto);
+//        print_r($objeto);
+        include('app/views/aviso/editar.php'); 
     }
 
+
     function _remover() {
+        
+    }
+    
+    function _atualizar(){
+        $form = $_POST;
+//        print_r($form);
+        $avisoRecord = new AvisoRecord;
+        $dados['aviso'] = $form['aviso'];
+        if($avisoRecord->atualizar($dados, $form['idaviso'])){
+            echo 'Atualiza&ccedil;&atilde;o realizada com sucesso ';
+        }  else {
+            echo 'Falha ao tentar atualizar';
+        }
+                
         
     }
 
