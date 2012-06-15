@@ -1,0 +1,61 @@
+/* 
+    Document   : formulario
+    Created on : 09/06/2012, 12:20:28
+    Author     : wallace
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+body{
+    background: #ddd;
+}
+
+
+#botoes{
+/*    display: inline;*/
+    background: orangered;
+    height: 25px;
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+#btAdministra{
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+#btAdministra li{
+    float:left; 
+    display:block; 
+    background:#2652d6; 
+    position:relative;
+    z-index:500; 
+    margin:5px 10px 0 10px;
+/*    border-radius: 0.3em;*/
+}
+#btAdministra li a{
+    display:block; 
+    padding:3px 8px 0 8px; 
+    font-weight:700;  
+    /*    height:23px; */
+    text-decoration:none; 
+    color:white; 
+    text-align:left; 
+    font-family:serif;
+    border-radius: 0.3em;
+}
+
+
+#corpo{
+        
+    position: absolute;
+/*    float: right;*/
+    width: 1000px;
+    height: 300px;
+    background: tomato;
+}
