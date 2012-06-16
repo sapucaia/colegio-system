@@ -210,7 +210,7 @@ abstract class ManipulaBanco extends TRecord {
             TTransaction::close();
 
             if (!$result) {
-                throw new Exception('Erro ao Executar a Instru��o SQL !!');
+                throw new Exception('Erro ao Executar a Instru&ccedil;&atilde;o SQL !!');
             } else {
                 return true;
             }

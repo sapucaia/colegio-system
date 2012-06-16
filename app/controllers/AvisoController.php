@@ -38,7 +38,15 @@ class AvisoController extends Controller {
         $aviso = new Aviso();
         $aviso->setAviso($form['aviso']);
         $avisoRecord = new AvisoRecord();
-        $avisoRecord->cadastrar($aviso);
+        if($avisoRecord->cadastrar($aviso)){
+            $str = 'Aviso salvo com sucesso total!';
+            $str = serialize($str);
+            include ('app/views/aviso/feedback.php');
+        }  else {
+            $str = 'Erro! Aviso não salvo';
+            $str = serialize($str);
+            include ('../../app/views/aviso/feedback.php');
+        }
     }
 
     function _mostrar() {
@@ -59,6 +67,18 @@ class AvisoController extends Controller {
 
 
     function _remover() {
+        $form = $_POST;
+        $avisoRecord  = new AvisoRecord;
+//        $dados['aviso'] = $form['aviso'];
+        if($avisoRecord->removerAviso($form['idaviso'])){
+            $str = 'Remo&ccedil;&atilde;o realizada com sucesso';
+            $str = serialize($str);
+            include ('app/views/aviso/feedback.php');
+        }  else {
+            $str = 'Falha ao tentar remover';
+            $str = serialize($str);
+            include ('app/views/aviso/feedback.php');
+        }
         
     }
     
@@ -68,9 +88,13 @@ class AvisoController extends Controller {
         $avisoRecord = new AvisoRecord;
         $dados['aviso'] = $form['aviso'];
         if($avisoRecord->atualizar($dados, $form['idaviso'])){
-            echo 'Atualiza&ccedil;&atilde;o realizada com sucesso ';
+            $str = 'Atualiza&ccedil;&atilde;o realizada com sucesso ';
+            $str = serialize($str);
+            include ('app/views/aviso/feedback.php');
         }  else {
-            echo 'Falha ao tentar atualizar';
+            $str = 'Falha ao tentar atualizar';
+            $str = serialize($str);
+            include ('app/views/aviso/feedback.php');
         }
                 
         

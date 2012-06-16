@@ -11,7 +11,16 @@
             <input type="submit" value="Atualizar">
 
         </form>
-        <li><a href="../../aviso">Voltar</a></li>
+        
+        
+        <form action="../remover" method="POST">
+            
+            <input type="hidden" name="idaviso" value="<?php echo "".$objeto->getIdAviso(); ?>">
+            <input type="submit" value="Remover aviso">
+        </form>
+        
+        <li><a href="../../aviso">Voltar</a></li>  
+        
     </body>
 </html>
 

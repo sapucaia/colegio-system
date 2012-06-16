@@ -33,6 +33,13 @@ class AvisoRecord extends ManipulaBanco {
         return $aviso = new Aviso($a['IDAVISO'][1], $a['DATA'][1], $a['AVISO'][1]);
     }
 
+    public function removerAviso($id) {
+        $criteria = new TCriteria;
+        $criteria->add(new TFilter("idaviso", "=", $id));
+        $this->deletar($criteria);
+        return true;
+    }
+
 }
 
 ?>
