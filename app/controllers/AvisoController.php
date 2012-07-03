@@ -84,7 +84,6 @@ class AvisoController extends Controller {
     
     function _atualizar(){
         $form = $_POST;
-//        print_r($form);
         $avisoRecord = new AvisoRecord;
         $dados['aviso'] = $form['aviso'];
         if($avisoRecord->atualizar($dados, $form['idaviso'])){

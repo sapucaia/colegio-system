@@ -1,10 +1,12 @@
-<form action="salvar" method="post">
+
+
+
+<form action="salvar" method="POST">
     <fieldset>
         <label for="titulo">Titulo: <br></label><input type="text" name="titulo" maxlength="30"> 
-        <label for="url">URL: <br></label> <input name="url" type="text">
+        <label for="aviso">Noticia: <br></label><textarea name="noticia" cols="30" rows="10" maxlength="500"></textarea>
         <input type="submit" value="Cadastrar">
         <input type="reset" value="Limpar">
     </fieldset>
 </form>
-
-<li><a href="../video">Voltar</a></li>
+<li><a href="../noticia">Voltar</a></li>

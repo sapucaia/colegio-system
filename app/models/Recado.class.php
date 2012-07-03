@@ -12,54 +12,65 @@ class Recado {
   private $destinatario;
   private $dataHora;
   private $mensagem;
+  private $status;
 
-  public function __construct($idRecado, $remetente, $destinatario, $dataHora, $mensagem) {
-    $this->idRecado = $idRecado;
-    $this->remetente = $remetente;
-    $this->destinatario = $destinatario;
-    $this->dataHora = $dataHora;
-    $this->mensagem = $mensagem;
+  function __construct($idRecado, $remetente, $destinatario, $dataHora, $mensagem, $status) {
+      $this->idRecado = $idRecado;
+      $this->remetente = $remetente;
+      $this->destinatario = $destinatario;
+      $this->dataHora = $dataHora;
+      $this->mensagem = $mensagem;
+      $this->status = $status;
   }
 
   public function getIdRecado() {
-    return $this->idRecado;
+      return $this->idRecado;
   }
 
   public function setIdRecado($idRecado) {
-    $this->idRecado = $idRecado;
+      $this->idRecado = $idRecado;
   }
 
   public function getRemetente() {
-    return $this->remetente;
+      return $this->remetente;
   }
 
   public function setRemetente($remetente) {
-    $this->remetente = $remetente;
+      $this->remetente = $remetente;
   }
 
   public function getDestinatario() {
-    return $this->destinatario;
+      return $this->destinatario;
   }
 
   public function setDestinatario($destinatario) {
-    $this->destinatario = $destinatario;
+      $this->destinatario = $destinatario;
   }
 
   public function getDataHora() {
-    return $this->dataHora;
+      return $this->dataHora;
   }
 
   public function setDataHora($dataHora) {
-    $this->dataHora = $dataHora;
+      $this->dataHora = $dataHora;
   }
 
   public function getMensagem() {
-    return $this->mensagem;
+      return $this->mensagem;
   }
 
   public function setMensagem($mensagem) {
-    $this->mensagem = $mensagem;
+      $this->mensagem = $mensagem;
   }
+
+  public function getStatus() {
+      return $this->status;
+  }
+
+  public function setStatus($status) {
+      $this->status = $status;
+  }
+
 
 }
 

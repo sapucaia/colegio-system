@@ -7,6 +7,8 @@ class URLInterpreter {
     function URLInterpreter() {
         $requestURI = explode('/', $_SERVER['REQUEST_URI']);
         $scriptName = explode('/', $_SERVER['SCRIPT_NAME']);
+//        print_r($requestURI);
+//        print_r($scriptName);
         $commandArray = array_diff_assoc($requestURI, $scriptName);
         $commandArray = array_values($commandArray);
         $module = null;

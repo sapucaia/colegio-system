@@ -3,11 +3,6 @@
 $todos = unserialize($todos);
 ?>
 
-<html>
-    <head>
-        <link href="recursos/css/formulario" type="text/css" rel="stylesheet"/>
-    </head>
-    <body>
     <h1>Administração - Avisos </h1>
     <div id="botoes">
         <ul id="btAdministra">
@@ -18,16 +13,18 @@ $todos = unserialize($todos);
     <p><a href="admMenuPrincipal">Voltar</a></p>
     <div id="corpo">
         <div>
-            <table>
+            <table id="myTable" class="tablesorter">
                 <thead>
                 <th>Aviso</th>
                 <th>Data</th>
+                
                 </thead>
                 <tbody>
                     <?php foreach ($todos as $aviso) { ?>
-                        <tr>
+                    <tr>
                             <td><?php echo "<a href=aviso/editar/" . $aviso->getIdAviso() . ">" . $aviso->getAviso() . "</a>"; ?></td>
                             <td><?php echo $aviso->getData(); ?></td>
+                            <td><a><img src="recursos/imagens/excluir.gif"></a></td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -35,5 +32,3 @@ $todos = unserialize($todos);
         </div>
 
     </div>
-</body>
-</html>

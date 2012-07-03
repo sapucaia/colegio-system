@@ -3,6 +3,7 @@ $todos = unserialize($todos);
 ?>
 
 <html>
+
     <head>
         <link href="../recursos/css/formulario" type="text/css" rel="stylesheet"/>
         <link href="../recursos/css/tabela" type="text/css" rel="stylesheet"/>
@@ -15,20 +16,22 @@ $todos = unserialize($todos);
             <table id="myTable" class="tablesorter">
                 <thead>
                 <th>Identificador</th>
-                <th>Aviso</th>
                 <th>Data</th>
+                <th>Titulo</th>
+                <th>Noticia</th>
                 </thead>
                 <tbody>
-                    <?php foreach ($todos as $aviso) { ?>
+                    <?php foreach ($todos as $noticia) { ?>
                         <tr>
-                            <td><?php echo $aviso->getIdAviso(); ?></td>
-                            <td><?php echo "<a href=../aviso/editar/" . $aviso->getIdAviso() . ">" . $aviso->getAviso() . "</a>"; ?></td>
-                            <td><?php echo $aviso->getData(); ?></td>
+                            <td><?php echo $noticia->getIdNoticia() ?></td> 
+                            <td><?php echo $noticia->getDataNoticia() ?></td>
+                            <td><?php echo $noticia->getTitulo(); ?></td>
+                            <td><?php echo $noticia->getNoticia(); ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
         </div>
-        <p><a href="../aviso">Voltar</a></p>
-    </body>
+    <li><a href="../noticia">Voltar</a></li>
+</body>
 </html>

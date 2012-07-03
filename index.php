@@ -6,7 +6,11 @@
         <link href="recursos/css/index.css" type="text/css" rel="stylesheet">
         <link href="recursos/css/barraLinkSuperior.css" type="text/css" rel="stylesheet">
         <link href="recursos/css/barraLinkInferior.css" type="text/css" rel="stylesheet">
-        <script src="recursos/javascript/jquery-1.4.3.min.js" type="text/javascript"></script> 
+        <link href="recursos/css/formulario.css" type="text/css" rel="stylesheet"/>
+        <link href="recursos/css/tabela.css" type="text/css" rel="stylesheet"/>
+        <script src="recursos/javascript/jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="recursos/javascript/jquery.tablesorter.js" type="text/javascript"></script>
+        <script src="recursos/javascript/tabela.js" type="text/javascript"></script>
         <script src="recursos/javascript/jquery-ui-1.8.6.custom.min.js" type="text/javascript"></script>
         <script src="recursos/javascript/carregamentoPagina.js" type="text/javascript"></script>
         <script src="recursos/javascript/efeitoBarra.js" type="text/javascript"></script>

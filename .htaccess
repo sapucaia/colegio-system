@@ -8,6 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^admin app/index.php
 RewriteRule ^aviso index.php
 RewriteRule ^recado index.php
+RewriteRule ^noticia index.php
 RewriteRule ^video index.php
 RewriteRule ^contato index.php
 RewriteRule ^usuario index.php

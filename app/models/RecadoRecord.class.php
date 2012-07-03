@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Description of RecadoRecord
- *
- * @author Paavo Soeiro
- */
 class RecadoRecord extends ManipulaBanco {
 
     private $recados;
@@ -12,7 +7,6 @@ class RecadoRecord extends ManipulaBanco {
     public function cadastrar($recado) {
         $dados['remetente'] = $recado->getRemetente();
         $dados['destinatario'] = $recado->getDestinatario();
-        $dados['datahora'] = $recado->getDataHora();
         $dados['mensagem'] = $recado->getMensagem();
         return $this->salvar($dados);
     }
@@ -25,11 +19,31 @@ class RecadoRecord extends ManipulaBanco {
                             $a['REMETENTE'][$i],
                             $a['DESTINATARIO'][$i],
                             $a['DATA'][$i],
-                            $a['MENSAGEM'][$i]);
+                            $a['MENSAGEM'][$i],
+                            $a['STATUS'][$i]);
         }
         return $this->recados;
     }
 
+    public function getRecado($id) {
+        $criteria = new TCriteria();
+        $criteria->add(new TFilter("idrecado", "=", $id));
+        $a = $this->selecionarColecao($criteria);
+//        print_r($a);
+        return $recado = new Recado($a['IDRECADO'][1],
+                        $a['REMETENTE'][1],
+                        $a['DESTINATARIO'][1],
+                        $a['DATA'][1],
+                        $a['MENSAGEM'][1],
+                        $a['STATUS'][1]);
+    }
+
+    public function removerRecado($id) {
+        $criteria = new TCriteria;
+        $criteria->add(new TFilter("idrecado", "=", $id));
+        $this->deletar($criteria);
+        return true;
+    }
 }
 
 ?>

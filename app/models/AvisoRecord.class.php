@@ -3,7 +3,7 @@
 /**
  * Description of AvisoRecord
  *
- * @author Paavo Soeiro
+ * @author Wallace Veridiano
  */
 class AvisoRecord extends ManipulaBanco {
 
