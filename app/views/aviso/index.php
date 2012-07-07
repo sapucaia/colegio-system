@@ -24,7 +24,6 @@ $todos = unserialize($todos);
                     <tr>
                             <td><?php echo "<a href=aviso/editar/" . $aviso->getIdAviso() . ">" . $aviso->getAviso() . "</a>"; ?></td>
                             <td><?php echo $aviso->getData(); ?></td>
-                            <td><a><img src="recursos/imagens/excluir.gif"></a></td>
                         </tr>
                     <?php } ?>
                 </tbody>
