@@ -7,9 +7,7 @@
 
 class NoticiaRecord extends ManipulaBanco{
     
-    
     private $noticias;
-
 
     public function cadastrar($noticia) {
         $dados['titulo'] = $noticia->getTitulo();
@@ -43,12 +41,6 @@ class NoticiaRecord extends ManipulaBanco{
         return true;
     }
 
-    
-    
-    
-    
-    
 }
-
 
 ?>

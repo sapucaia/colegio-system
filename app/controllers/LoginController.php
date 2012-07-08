@@ -1,6 +1,6 @@
 <?php
 
-require_once 'conf/lock.php';
+#require_once 'conf/lock.php';
 
 class LoginController extends Controller {
 
@@ -12,23 +12,27 @@ class LoginController extends Controller {
         #echo $this->Command;
     }
 
-    function _login() {
+    function _logar() {
         $usuarioRecord = new UsuarioRecord();
         $usuario = $usuarioRecord->getUsuarioPorLogin($_POST['login']);
         $senha = $_POST['senha'];
         $senha = sha1(trim($senha));
         if ($usuario->getSenha() === $senha) {
-            $usuarioRecord->setUltimoAcesso($login);
+            $usuarioRecord->setUltimoAcesso($usuario);
             $_SESSION['usuario'] = serialize($usuario);
+            echo 'LOGOU';
+            header('Location: ../admin');
             return true;
         } else {
+            header('Location: ../login');
             return false;
         }
     }
 
     function _logout() {
-        session_unregister($_SESSION['usuario']);
+        unset($_SESSION['usuario']);
         session_destroy();
+        header('Location: ../login');
     }
 
 }

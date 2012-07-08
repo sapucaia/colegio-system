@@ -17,16 +17,15 @@
         <script src="recursos/javascript/subMenu.js" type="text/javascript"></script>
     </head>
     <body>
-
-<?php
-require_once('core/dispatcher/Command.php');
-require_once('core/dispatcher/UrlInterpreter.php');
-require_once('core/dispatcher/CommandDispatcher.php');
-require_once('core/dispatcher/Controller.php');
-$urlInterpreter = new UrlInterpreter();
-$command = $urlInterpreter->getCommand();
-$commandDispatcher = new CommandDispatcher($command);
-$commandDispatcher->Dispatch();
-?>
+        <?php
+        require_once('core/dispatcher/Command.php');
+        require_once('core/dispatcher/UrlInterpreter.php');
+        require_once('core/dispatcher/CommandDispatcher.php');
+        require_once('core/dispatcher/Controller.php');
+        $urlInterpreter = new UrlInterpreter();
+        $command = $urlInterpreter->getCommand();
+        $commandDispatcher = new CommandDispatcher($command);
+        $commandDispatcher->Dispatch();
+        ?>
     </body>
 </html>

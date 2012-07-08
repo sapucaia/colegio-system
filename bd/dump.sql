@@ -255,6 +255,19 @@ CREATE INDEX idx_usuario
   (idusuario);
 
 
+CREATE TABLE noticia
+(
+  idnoticia serial NOT NULL,
+  data date NOT NULL,
+  titulo character varying(255) NOT NULL,
+  noticia text NOT NULL,
+  CONSTRAINT noticia_pkey PRIMARY KEY (idnoticia)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE noticia OWNER TO colegio;
+
 --
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --

@@ -5,6 +5,7 @@ RewriteEngine On
 #  Rules
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^login$ app/login.php [L]
 RewriteRule ^admin app/index.php
 RewriteRule ^aviso index.php
 RewriteRule ^recado index.php

@@ -24,46 +24,46 @@ if (file_exists('core/adodb5/adodb.inc.php')) {
     include_once '../../../core/adodb5/adodb.inc.php';
 }
 
-function __autoload($classe) {
-    if (file_exists('../../../core/app.ado/' . $classe . '.class.php')) {
-        include_once '../../../core/app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('../../core/app.ado/' . $classe . '.class.php')) {
-        include_once '../../core/app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('../core/app.ado/' . $classe . '.class.php')) {
-        include_once '../core/app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('../app.ado/' . $classe . '.class.php')) {
-        include_once '../app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('../../app.ado/' . $classe . '.class.php')) {
-        include_once '../../app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('core/app.ado/' . $classe . '.class.php')) {
-        include_once 'core/app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('../../../../core/app.ado/' . $classe . '.class.php')) {
-        include_once '../../../../core/app.ado/' . $classe . '.class.php';
-    } elseif (file_exists('../models/' . $classe . '.class.php')) {
-        include_once '../models/' . $classe . '.class.php';
-    } elseif (file_exists('app/models/' . $classe . '.class.php')) {
-        include_once 'app/models/' . $classe . '.class.php';
-    } elseif (file_exists('../app/models/' . $classe . '.class.php')) {
-        include_once '../app/models/' . $classe . '.class.php';
-    } elseif (file_exists('../../../app/models/' . $classe . '.class.php')) {
-        include_once '../../../app/models/' . $classe . '.class.php';
-    }
+spl_autoload_register(function($classe) {
+            if (file_exists('../../../core/app.ado/' . $classe . '.class.php')) {
+                include_once '../../../core/app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('../../core/app.ado/' . $classe . '.class.php')) {
+                include_once '../../core/app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('../core/app.ado/' . $classe . '.class.php')) {
+                include_once '../core/app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('../app.ado/' . $classe . '.class.php')) {
+                include_once '../app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('../../app.ado/' . $classe . '.class.php')) {
+                include_once '../../app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('core/app.ado/' . $classe . '.class.php')) {
+                include_once 'core/app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('../../../../core/app.ado/' . $classe . '.class.php')) {
+                include_once '../../../../core/app.ado/' . $classe . '.class.php';
+            } elseif (file_exists('../models/' . $classe . '.class.php')) {
+                include_once '../models/' . $classe . '.class.php';
+            } elseif (file_exists('app/models/' . $classe . '.class.php')) {
+                include_once 'app/models/' . $classe . '.class.php';
+            } elseif (file_exists('../app/models/' . $classe . '.class.php')) {
+                include_once '../app/models/' . $classe . '.class.php';
+            } elseif (file_exists('../../../app/models/' . $classe . '.class.php')) {
+                include_once '../../../app/models/' . $classe . '.class.php';
+            }
 
-    if (file_exists('../controllers/' . $classe . '.php')) {
-        include_once '../controllers/' . $classe . '.php';
-    } elseif (file_exists('app/controllers/' . $classe . '.php')) {
-        include_once 'app/controllers/' . $classe . '.php';
-    } elseif (file_exists('../app/controllers/' . $classe . '.php')) {
-        include_once '../app/controllers/' . $classe . '.php';
-    } elseif (file_exists('../../app/controllers/' . $classe . '.php')) {
-        include_once '../../app/controllers/' . $classe . '.php';
-    } elseif (file_exists('../../../app/controllers/' . $classe . '.php')) {
-        include_once '../../../app/controllers/' . $classe . '.php';
-    } elseif (file_exists('../app/controllers/' . $classe . '.php')) {
-        include_once '../app/controllers/' . $classe . '.php';
-    }
-}
-
-session_start();
+            if (file_exists('../controllers/' . $classe . '.php')) {
+                include_once '../controllers/' . $classe . '.php';
+            } elseif (file_exists('app/controllers/' . $classe . '.php')) {
+                include_once 'app/controllers/' . $classe . '.php';
+            } elseif (file_exists('../app/controllers/' . $classe . '.php')) {
+                include_once '../app/controllers/' . $classe . '.php';
+            } elseif (file_exists('../../app/controllers/' . $classe . '.php')) {
+                include_once '../../app/controllers/' . $classe . '.php';
+            } elseif (file_exists('../../../app/controllers/' . $classe . '.php')) {
+                include_once '../../../app/controllers/' . $classe . '.php';
+            } elseif (file_exists('../app/controllers/' . $classe . '.php')) {
+                include_once '../app/controllers/' . $classe . '.php';
+            }
+        });
+if (!isset($_SESSION))
+    session_start();
 ?>
 

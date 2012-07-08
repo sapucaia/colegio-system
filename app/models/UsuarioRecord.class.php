@@ -46,12 +46,9 @@ class UsuarioRecord extends ManipulaBanco {
         return $usuario;
     }
 
-    public function setUltimoAcesso($login) {
-        $criteria = new TCriteria();
-        $criteria->add(new TFilter("login", "=", $login));
-        $a = $this->selecionarColecao($criteria);
-        $a['ULTIMOACESSO'] = time();
-        return $this->atualizar($a, $a['IDUSUARIO']);
+    public function setUltimoAcesso($usuario) {
+        $dados['ultimoacesso'] = date("d/m/Y G:i:s", time());
+        return $this->atualizar($dados, $usuario->getIdUsuario());
     }
 
 }

@@ -15,12 +15,14 @@
 
 #barraLinkSuperior{
     background: #2652d6;
-    height: 32px;
+    height: 50px;
+    margin: 2px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    -moz-box-shadow: 5px 5px 5px black;
-    -webkit-box-shadow: 5px 5px 5px black;
-    box-shadow: 5px 5px 5px black;
+    border-bottom-right-radius: 5px 5px;
+    -moz-box-shadow: 0 0 10px black;
+    -webkit-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 8px black;
 
 }
 
@@ -37,6 +39,7 @@
 #nav li {
     float:left; 
     display:block; 
+    
     background:#2652d6; 
     position:relative;
     z-index:500; 
@@ -46,16 +49,32 @@
 
 /* this is the parent menu */
 #nav li a {
+/*    width: 100px;*/
     display:block; 
     padding:3px 8px 0 8px; 
     font-weight:700;  
     /*    height:23px; */
     text-decoration:none; 
     color:white; 
+    height: 35px;
+    line-height: 35px;
     text-align:left; 
-    font-family:serif;
+    font-family:helvetica;
     border-radius: 0.3em;
+    font-size: 18px;
 
+}
+
+#nav li ul li{
+    width: 200px;
+}
+
+#nav li ul li a{
+    height: 20px;
+    border-radius: 0;
+    display: block;
+    line-height: 20px;
+    padding: 2px;
 }
 
 #nav li a:hover {
@@ -87,16 +106,18 @@
 }
 
 /* display block will make the link fill the whole area of LI */
+/*
 #nav ul a {
     display:block;  
     height:15px;
-    /*    padding: 8px 5px; */
+        padding: 8px 5px; 
     padding-bottom: 5px;
     border-radius: 0em;
     border-bottom: 0px #fff solid;
     border-top: 0;
-    /*    color:#666;*/
+        color:#666;
 }
+*/
 
 #nav ul a:hover {
     /*    text-decoration:;	*/

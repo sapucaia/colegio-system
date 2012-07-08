@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class URLInterpreter {
 
@@ -43,4 +43,5 @@ class URLInterpreter {
     }
 
 }
+
 ?>

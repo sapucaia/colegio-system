@@ -1,43 +1,16 @@
 <?php
 
+/* Classe abstrata para
+ * gerenciar expressÃµes
+ */
 
-     /* Classe abstrata para
+abstract class TExpression {
+    //operadores logicos
 
+    const AND_OPERATOR = ' AND';
+    const OR_OPERATOR = ' OR';
 
-     * gerenciar expressões
-
-
-     */
-
-
-     
-
-
-     abstract class TExpression
-
-
-     {
-
-
-        //operadores logicos
-
-
-        
-
-
-        const AND_OPERATOR = ' AND';
-
-
-        const OR_OPERATOR = ' OR';
-
-
-        
-
-
-        abstract public function dump();
-
-
-     }
-
+    abstract public function dump();
+}
 
 ?>
