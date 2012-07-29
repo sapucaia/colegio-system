@@ -20,7 +20,7 @@
             <input type="submit" value="Remover noticia" >
         </form>
         
-        <li><a href="../../noticia">Voltar</a></li>  
+        <p id="voltar"><a href="../../noticia">Voltar</a></p>  
         
     </body>
 </html>

@@ -7,4 +7,4 @@
     </fieldset>
 </form>
 
-<li><a href="../video">Voltar</a></li>
+<p id="voltar"><a href="../video">Voltar</a></p>

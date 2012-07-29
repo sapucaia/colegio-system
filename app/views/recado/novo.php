@@ -7,4 +7,4 @@
         <input type="reset" value="Limpar">
     </fieldset>
 </form>
-<li><a href="../noticia">Voltar</a></li>
+<p id="voltar"><a href="../noticia">Voltar</a></li>

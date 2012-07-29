@@ -23,7 +23,7 @@ function mudaStatus($recado) {
 
     </ul>
 </div>
-<p><a href="admMenuPrincipal">Voltar</a></p>
+
 <div id="corpo">
     <div>
         <table id="myTable" class="tablesorter">
@@ -35,16 +35,18 @@ function mudaStatus($recado) {
             <th>Status</th>
             </thead>
             <tbody>
-<?php foreach ($todos as $recado) { ?>
+                <?php foreach ($todos as $recado) { ?>
                     <tr>
                         <td><?php echo "<a href=recado/editar/" . $recado->getIdRecado() . ">" . $recado->getRemetente() . "</a>"; ?></td>
                         <td><?php echo $recado->getDestinatario(); ?></td>
                         <td><?php echo $recado->getDataHora(); ?></td>
                         <td><?php echo $recado->getMensagem(); ?></td>
-                        <td><?php echo mudaStatus($recado)?></td>
+                        <td><?php echo mudaStatus($recado) ?></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
+    
 </div>
+<p id="voltar"><a href="admMenuPrincipal">Voltar</a></p>

@@ -23,7 +23,7 @@
             <input type="submit" value="Remover video" >
         </form>
         
-        <li><a href="../../video">Voltar</a></li>  
+        <p id="voltar"><a href="../../video">Voltar</a></p>  
         
     </body>
 </html>

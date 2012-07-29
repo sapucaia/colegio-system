@@ -15,7 +15,7 @@
             <input type="submit" value="Remover aviso" >
         </form>
         
-        <li><a href="../../aviso">Voltar</a></li>  
+        <p id="voltar"><a href="../../aviso">Voltar</a></p>  
         
     
 

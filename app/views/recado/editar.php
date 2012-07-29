@@ -19,5 +19,5 @@
     <input type="hidden" name="idrecado" value="<?php echo "" . $objeto->getIdRecado(); ?>">
     <input type="submit" value="Remover recado"> 
 </form>
-<li><a href="../../recado">Voltar</a></li>  
+<p id="voltar"><a href="../../recado">Voltar</a></p>
 

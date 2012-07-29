@@ -10,9 +10,9 @@ $todos = unserialize($todos);
             <li><a href="aviso/mostrar">Mostrar avisos</a></li>
         </ul>
     </div>
-    <p><a href="admMenuPrincipal">Voltar</a></p>
+    
     <div id="corpo">
-        <div>
+        <div id="tabela">
             <table id="myTable" class="tablesorter">
                 <thead>
                 <th>Aviso</th>
@@ -29,5 +29,8 @@ $todos = unserialize($todos);
                 </tbody>
             </table>
         </div>
-
+        
+    </div>
+    <div>
+    <p id="voltar"><a href="admMenuPrincipal">Voltar</a></p>
     </div>

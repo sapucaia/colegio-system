@@ -33,7 +33,7 @@ $usuario = unserialize($_SESSION['usuario']);
         require_once('../core/dispatcher/UrlInterpreter.php');
         require_once('../core/dispatcher/CommandDispatcher.php');
         require_once('../core/dispatcher/Controller.php');
-
+        echo 'ola mundo!';
         $urlInterpreter = new UrlInterpreter();
         $command = $urlInterpreter->getCommand();
         $commandDispatcher = new CommandDispatcher($command, true);

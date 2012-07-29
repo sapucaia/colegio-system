@@ -6,7 +6,7 @@ $str = unserialize($str);
     <head></head>
     <body>
         <?php echo ''.$str;?>
-    <li><a href="../recado">Voltar</a></li>
+    <p id="voltar"><a href="../recado">Voltar</a></p>
     </body>
 </html>
 

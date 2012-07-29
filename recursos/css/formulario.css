@@ -10,18 +10,16 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
-body{
+/*body{
     background: white;
-}
+}*/
 
 
 #botoes{
-/*    display: inline;*/
-    background: orangered;
     height: 25px;
-    width: 600px;
+    width: 900px;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #btAdministra{
@@ -32,30 +30,113 @@ body{
 #btAdministra li{
     float:left; 
     display:block; 
-    background:#2652d6; 
+    background:#8dbdd8; 
     position:relative;
     z-index:500; 
     margin:5px 10px 0 10px;
-/*    border-radius: 0.3em;*/
+    font-family: Arial;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+
+
+    /*    border-radius: 0.3em;*/
 }
 #btAdministra li a{
     display:block; 
-    padding:3px 8px 0 8px; 
-    font-weight:700;  
-    /*    height:23px; */
+    padding:5px ; 
+    font-weight:700; 
+    font-family: Arial;
+    width:140px;
+    height:25px; 
     text-decoration:none; 
     color:white; 
-    text-align:left; 
-    font-family:serif;
-    border-radius: 0.3em;
+    text-align:center; 
+    font-weight: bold;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*    border-radius: 0.5em;*/
+
+
+
+}
+
+#btAdministra li a:hover{
+    background: #0095FF;
+    color: white;
+    font-family: Arial;
+    -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
 }
 
 
 #corpo{
-        
-    position: absolute;
-    margin: 0 auto;
-    width: 100%;
+    padding: 15px;
+    border: solid #CDCDCD 1px;
+    width: 800px;
+    position: relative;
+/*        float: right;*/
+    margin: 5px auto;
     height: 300px;
-    background: tomato;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
 }
+
+
+p img{
+    width: 280px;
+    height: 100px;
+    margin: 15px;
+}
+
+h1{
+    background: #a7a8b4 ;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: white;
+    padding: 3px;
+    font-family: Arial;
+
+}
+
+p#voltar a{
+
+    float:left; 
+    display:block; 
+    background:#8dbdd8; 
+    position:relative;
+    z-index:500; 
+    margin:5px 10px 30px 10px;
+
+
+
+    padding:5px 8px 5px 8px; 
+    font-weight:700; 
+    width:130px;
+    height:25px; 
+    text-align: center;
+    color:white; 
+    font-weight: bold;
+    /*    bottom:  500px;*/
+
+}
+
+
+p#voltar a:hover{
+    background: #0095FF;
+    color: white;
+    /*    border: solid 1px black;*/
+    -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+}
+

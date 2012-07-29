@@ -14,7 +14,7 @@ $todos = unserialize($todos);
 
     </head>
     <body>
-        <div>
+        <div id="corpo">
             <table id="myTable" class="tablesorter">
                 <thead>
                 <th>Identificador</th>
@@ -32,6 +32,6 @@ $todos = unserialize($todos);
                 </tbody>
             </table>
         </div>
-    <li><a href="../video">Voltar</a></li>
+    <p id="voltar"><a href="../video">Voltar</a></p>
 </body>
 </html>
