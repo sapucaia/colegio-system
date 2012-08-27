@@ -34,6 +34,14 @@ navegar = function(){
     })
     
     
+    $("#navegaSuperior li ul li").click(function(){
+        
+        atribuir($(this).attr("href"))
+        return false;
+
+    })
+    
+    
     
 }
 
