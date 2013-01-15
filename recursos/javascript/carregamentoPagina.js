@@ -8,7 +8,7 @@
 
 $(function(){
     
-    atribuir("home.html")
+    atribuir("home.php")
     navegar()
 })
 
@@ -26,7 +26,7 @@ navegar = function(){
 
     })
     
-    $("#navegaSuperior a").click(function(){
+    $("#nav > li > a").click(function(){
         
         atribuir($(this).attr("href"))
         return false;

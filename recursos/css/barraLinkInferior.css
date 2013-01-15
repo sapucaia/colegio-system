@@ -17,88 +17,123 @@
 
 
 #barraLinkInferior{
-    background: #2652d6;
-    height: 32px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow: 5px 5px 5px black;
-    -webkit-box-shadow: 5px 5px 5px black;
-    box-shadow: 5px 5px 5px black;  
+    /*    background: #2652d6;
+        height: 32px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 5px 5px 5px black;
+        -webkit-box-shadow: 5px 5px 5px black;
+        box-shadow: 5px 5px 5px black;  */
+    overflow: hidden;
+    padding-bottom: 20px!important;
+    margin-top: 5px;
 }
 
-
-/* *{
-       margin:0;
-       padding:0;
-    }*/
-
-/*ul{
-    list-style:none;
-    
-}
-
-#navegaInferior{
-        padding-left: 2px;
-    display:block;
-    height:100%;
-        color:#FFF;
-    text-decoration:none;
-        border-right:1px solid #FFF;
-    background: #2652d6;
-    margin: 0;
-    padding-left: 5px;
-    padding-bottom: 2px;
-    color: #c43f3f;
-
-}
-#navegaInferior li{
-    list-style:none;
-    display:inline;
-    float:left;
-    margin:0;
-    margin-right: 15px;
-    padding:0;
-    text-align:center;
-    margin-top: 4px;
-
-}
-#navegaInferior li a{
-    margin: 0;
-    display:block;
-    height:100%;
-    color:#FFF;
-    font-family: sans-serif;
-    text-decoration:none;
-    font-weight: 700;
-    background: #2652d6;
-    padding-left: 5px;
-    padding-right: 2px;
-    padding-top: 2px;
-}*/
 #navegaInferior{
     margin:0; 
     padding:0; 
     list-style:none;
 }
+
+#navegaInferior li img{
+    float: left;
+}
+
 #navegaInferior li{
     float:left; 
     display:block; 
-    background:#2652d6; 
+    /*background:#2652d6;*/ 
     position:relative;
     z-index:500; 
     margin:5px 10px 0 10px;
     border-radius: 0.3em;
+    height: 70px;
+    width: 170px;
+    text-align: center;
+    line-height: 40px;
+    
+     border-top-left-radius: 10px 50px;
+    border-bottom-left-radius: 10px 50px;
+    border-top-right-radius: 10px 50px;
+    border-bottom-right-radius: 10px 50px;
+    -moz-border-radius-topleft: 10px 50px;
+    -moz-border-radius-topright: 10px 50px;
+    -moz-border-radius-bottomright: 10px 50px;
+    -moz-border-radius-bottomleft: 10px 50px;
 }
+
 #navegaInferior li a{
     display:block; 
     padding:3px 8px 0 8px; 
+    padding: 15px;
     font-weight:700;  
-    /*    height:23px; */
+    height:23px; 
     text-decoration:none; 
     color:white; 
-    text-align:left; 
-    font-family:serif;
-    border-radius: 0.3em;
+    text-align:center; 
+    /*border-radius: 0.3em;*/
+    /*background: blue;*/
+
+   
+
+}
+
+.blue {
+    color: #fff;
+    /*background: #48C9FF;*/
+    background: #005B9A;
+    background: -webkit-linear-gradient(top, #005B9A 0%, #2EA8E5 100%);
+    /*background: -webkit-linear-gradient(top, #48C9FF 0%, #2EA8E5 100%);*/
+    background: -moz-linear-gradient(top, #48C9FF 0%, #2EA8E5 100%);
+    background: -ms-linear-gradient(top, #48C9FF 0%, #2EA8E5 100%);
+    background: -o-linear-gradient(top, #48C9FF 0%, #2EA8E5 100%);
+    background: linear-gradient(to bottom, #48C9FF 0%, #2EA8E5 100%);
+    text-shadow: #29a3cc 0 1px 3px;
+    -webkit-box-shadow:
+        inset 0 1px 0 #38bdf4,
+        inset 0 2px 0 #7bdeff,
+        0 1px 3px #777,
+        0 0px 1px #ccc;
+    -moz-box-shadow:
+        inset 0 1px 0 #38bdf4,
+        inset 0 2px 0 #7bdeff,
+        0 1px 3px #777,
+        0 0px 1px #ccc;
+    box-shadow:
+        inset 0 1px 0 #38bdf4,
+        inset 0 2px 0 #7bdeff,
+        0 1px 3px #777,
+        0 0px 1px #ccc;}
+
+.fancy_button{
+    display: block;
+    font: bold 16px Arial;
+    /*letter-spacing:;*/
+    text-decoration: none;
+    margin: 20px auto;
+    padding: 20px 30px 20px 25px;
+    width: 170px;
+    border-top-left-radius: 10px 50px;
+    border-bottom-left-radius: 10px 50px;
+    border-top-right-radius: 10px 50px;
+    border-bottom-right-radius: 10px 50px;
+    -moz-border-radius-topleft: 10px 50px;
+    -moz-border-radius-topright: 10px 50px;
+    -moz-border-radius-bottomright: 10px 50px;
+    -moz-border-radius-bottomleft: 10px 50px;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#navegaInferior li a:hover{
+    /*-webkit-transform: rotate(-5deg);*/
+    /*background: red;*/
+    color: white;
 }
 
 

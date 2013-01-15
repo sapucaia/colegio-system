@@ -1,4 +1,4 @@
-﻿<?
+﻿<?php
 
 class Command {
 
@@ -7,7 +7,7 @@ class Command {
     var $Parameters = array();
     var $Module;
 
-    function Command($controllerName, $functionName, $parameters, $module = null) {
+    public function __construct($controllerName, $functionName, $parameters, $module = null) {
         $this->Parameters = $parameters;
         $this->Name = $controllerName;
         $this->Function = $functionName;
@@ -37,7 +37,7 @@ class Command {
     function setParameters($controllerParameters) {
         $this->Parameters = $controllerParameters;
     }
-    
+
     public function getModule() {
         return $this->Module;
     }
@@ -45,8 +45,6 @@ class Command {
     public function setModule($Module) {
         $this->Module = $Module;
     }
-
-
 
 }
 ?>

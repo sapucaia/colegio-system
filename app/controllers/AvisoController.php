@@ -15,9 +15,9 @@ class AvisoController extends Controller {
 
     function _default() {
 
-        $avisoRecord = new AvisoRecord();
-        $todos = $avisoRecord->listar();
-        $todos = serialize($todos);
+//        $avisoRecord = new AvisoRecord();
+//        $todos = $avisoRecord->listar();
+//        $todos = serialize($todos);
 
         include($this->PATH . 'index.php');
     }

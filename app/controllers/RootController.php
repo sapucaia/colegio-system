@@ -5,9 +5,9 @@
 class RootController extends Controller {
 
     function _default() {
-        $avisoRecord = new AvisoRecord();
-        $todosAvisos = $avisoRecord->listar();
-        $todosAvisos = serialize($todosAvisos);
+//        $avisoRecord = new AvisoRecord();
+//        $todosAvisos = $avisoRecord->listar();
+//        $todosAvisos = serialize($todosAvisos);
         include "pagina.php";
     }
 

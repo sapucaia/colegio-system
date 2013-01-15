@@ -14,15 +14,16 @@
 
 
 #barraLinkSuperior{
-    background: #2652d6;
-    height: 50px;
+    /*background: #2652d6;*/
+    /*background: #005b9a;*/
+    /*height: 50px;*/
     margin: 2px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     border-bottom-right-radius: 5px 5px;
     -moz-box-shadow: 0 0 10px black;
-    -webkit-box-shadow: 0 0 10px black;
-    box-shadow: 0 0 8px black;
+    /*-webkit-box-shadow: 0 0 10px black;*/
+    /*box-shadow: 0 0 8px black;*/
 
 }
 
@@ -30,7 +31,10 @@
     margin:0; 
     padding:0; 
     list-style:none;
-
+    display: block;
+    height: 50px;
+    overflow: visible;
+    /*position: relative;*/
 }	
 
 /* make the LI display inline */
@@ -39,8 +43,8 @@
 #nav li {
     float:left; 
     display:block; 
-    
-    background:#2652d6; 
+
+    /*background:#005b9a;*/ 
     position:relative;
     z-index:500; 
     margin:5px 10px 0 10px;
@@ -49,17 +53,17 @@
 
 /* this is the parent menu */
 #nav li a {
-/*    width: 100px;*/
+    /*    width: 100px;*/
     display:block; 
     padding:3px 8px 0 8px; 
-    font-weight:700;  
+    font-weight:500;  
     /*    height:23px; */
     text-decoration:none; 
     color:white; 
     height: 35px;
-    line-height: 35px;
+    line-height: 35px !important;
     text-align:left; 
-    font-family:helvetica;
+    /*font-family:helvetica;*/
     border-radius: 0.3em;
     font-size: 18px;
 
@@ -70,11 +74,13 @@
 }
 
 #nav li ul li a{
-    height: 20px;
+    height: 25px;
     border-radius: 0;
     display: block;
     line-height: 20px;
-    padding: 2px;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 12px;
 }
 
 #nav li a:hover {
@@ -130,6 +136,10 @@
 html #nav ul {
     /*    margin:0 0 0 -2px;*/
 }
+
+/*.subitem{
+    line-height: 20px !important;
+}*/
 
 
 

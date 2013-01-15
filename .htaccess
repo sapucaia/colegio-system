@@ -7,11 +7,14 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^login$ app/login.php [L]
 RewriteRule ^admin app/index.php
+RewriteRule ^/ index.php
 RewriteRule ^aviso index.php
 RewriteRule ^recado index.php
 RewriteRule ^noticia index.php
 RewriteRule ^video index.php
-RewriteRule ^contato index.php
+#RewriteRule ^contato index.php
+RewriteRule ^galeria index.php
 RewriteRule ^usuario index.php
 RewriteRule ^email index.php
+RewriteRule ^foto index.php
 

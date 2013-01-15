@@ -18,8 +18,8 @@ class AvisoRecord extends ManipulaBanco {
     public function listar() {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDAVISO']); $i++) {
-            $this->avisos[$i] = new Aviso($a['IDAVISO'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->avisos[$i] = new Aviso($a['ID'][$i],
                             $a['DATA'][$i],
                             $a['AVISO'][$i]);
         }
