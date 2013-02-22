@@ -12,35 +12,63 @@ if (empty($_SESSION['usuario'])) {
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href=""/>
-        <script type="text/javascript" src="recursos/javascript/jquery-1.4.3.min.js"></script>
+        <!--<link href="recursos/css/tabela.css" type="text/css" rel="stylesheet"/>-->
+        <link type="text/css" rel="stylesheet" href="recursos/css/jquery.dataTables.css"/>
+        <link type="text/css" rel="stylesheet" href="recursos/css/jquery.dataTables_themeroller.css"/>
+        <!--<link type="text/css" rel="stylesheet" href="recursos/css/custom-theme/jquery-ui-1.9.1.custom.css"/>-->
+        <link type="text/css" rel="stylesheet" href="recursos/css/smoothness/jquery-ui-1.10.1.custom.css"/>
+        <script type="text/javascript" src="recursos/javascript/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="recursos/javascript/jquery-ui-1.10.1.custom.js"></script>
+        <script type="text/javascript" src="recursos/javascript/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="recursos/javascript/admin.js"></script>
         <script type="text/javascript" src="recursos/javascript/carregamentoPaginaAdm.js"></script>
         <title></title>
     </head>
     <body>
         Ol&aacute;&nbsp;<?php echo $usuario->getNomeCompleto(); ?>
         <a href="login/logout">Sair</a>
-        <h1>M&oacute;dulo de administra&ccedil;&atilde;o</h1>
-
-        <div id="menuPrincipal">
+        <div id="tabs">
             <ul>
-                <li><a href="app/views/aviso/index.php">Avisos</a></li>
-                <li><a href="">Recados</a></li>
-                <li><a href="adm/contatoAdm.php">Contato</a></li>
-                <li><a href="adm/videoAdm.php">V&iacute;deos</a></li>
+                <li><a href="#tabAvisos">Avisos</a></li>
+                <li><a href="#tabEmails">Emails</a></li>
+                <li><a href="#tabFotos">Fotos</a></li>
+                <li><a href="#tabNoticias">Noticias</a></li>
+                <li><a href="#tabRecados">Recados</a></li>
+                <li><a href="#tabVideos">Videos</a></li>
             </ul>
+            <div id="tabAvisos">
+                <?php
+//                echo 'teste';
+                include"views/aviso/index.php";
+//                print_r($todos);
+                ?>
+            </div> 
+            <div id="tabEmails">
+                <?php
+                include"views/email/index.php";
+                ?>
+            </div> 
+            <div id="tabFotos">
+                <?php
+                include"views/galeria/index.php";
+                ?>
+            </div> 
+            <div id="tabNoticias">
+                <?php
+                include"views/noticia/index.php";
+                ?>
+            </div> 
+            <div id="tabRecados">
+                <?php
+                include"views/recado/index.php";
+                ?>
+            </div> 
+            <div id="tabVideos">
+                <?php
+                include"views/video/index.php";
+                ?>
+            </div> 
+        </div
 
-        </div>
-        <?php
-        require_once('../core/dispatcher/Command.php');
-        require_once('../core/dispatcher/UrlInterpreter.php');
-        require_once('../core/dispatcher/CommandDispatcher.php');
-        require_once('../core/dispatcher/Controller.php');
-
-        $urlInterpreter = new UrlInterpreter();
-        $command = $urlInterpreter->getCommand();
-        $commandDispatcher = new CommandDispatcher($command, true);
-        $commandDispatcher->Dispatch();
-        ?>
     </body>
 </html>
