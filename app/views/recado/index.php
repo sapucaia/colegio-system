@@ -1,6 +1,7 @@
 
 <?php
-$todos = unserialize($todos);
+$recadoRecord = new RecadoRecord();
+$todos = $recadoRecord->listar();
 
 function mudaStatus($recado) {
     $str;
@@ -14,7 +15,7 @@ function mudaStatus($recado) {
 
 
 
-<h1>Administra&ccedil;&atilde;o - Recados</h1>
+<!--<h1>Administra&ccedil;&atilde;o - Recados</h1>
 <div id="botoes">
     <ul id="btAdministra">
 
@@ -23,28 +24,27 @@ function mudaStatus($recado) {
 
     </ul>
 </div>
-<p><a href="admMenuPrincipal">Voltar</a></p>
+<p><a href="admMenuPrincipal">Voltar</a></p>-->
 <div id="corpo">
-    <div>
-        <table id="myTable" class="tablesorter">
-            <thead>
-            <th>Remetente</th>
-            <th>Destinat&aacute;rio</th>
-            <th>Data</th>
-            <th>Mensagem</th>
-            <th>Status</th>
-            </thead>
-            <tbody>
-<?php foreach ($todos as $recado) { ?>
-                    <tr>
-                        <td><?php echo "<a href=recado/editar/" . $recado->getIdRecado() . ">" . $recado->getRemetente() . "</a>"; ?></td>
-                        <td><?php echo $recado->getDestinatario(); ?></td>
-                        <td><?php echo $recado->getDataHora(); ?></td>
-                        <td><?php echo $recado->getMensagem(); ?></td>
-                        <td><?php echo mudaStatus($recado)?></td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-    </div>
+    <table id="myTable" class="tablesorter">
+        <thead>
+        <th>Remetente</th>
+        <th>Destinat&aacute;rio</th>
+        <th>Data</th>
+        <th>Mensagem</th>
+        <th>Status</th>
+        </thead>
+        <tbody>
+            <?php foreach ($todos as $recado) { ?>
+                <tr>
+                    <td><?php echo "<a href=recado/editar/" . $recado->getIdRecado() . ">" . $recado->getRemetente() . "</a>"; ?></td>
+                    <td><?php echo $recado->getDestinatario(); ?></td>
+                    <td><?php echo $recado->getDataHora(); ?></td>
+                    <td><?php echo $recado->getMensagem(); ?></td>
+                    <td><?php echo mudaStatus($recado) ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+    <div class="command"><a href="app/views/recado/novo.php">Novo</a></div>
 </div>
