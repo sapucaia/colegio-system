@@ -19,15 +19,15 @@ final class TRepository {
 
     function __construct($class) {
         $this->class = $class;
-        $db = file_get_contents('../db/db.inc.dbt');
-//        while (!feof($file_handle)) {
-//            $db = fgets($file_handle);
+//        $db = file_get_contents('../db/db.inc.dbt');
+////        while (!feof($file_handle)) {
+////            $db = fgets($file_handle);
+////        }
+////        fclose($file_handle);
+//        if ($db !== false) {
+//            $tmp = file_get_contents("../db/{$db}.db");
+//            $this->db = unserialize($tmp);
 //        }
-//        fclose($file_handle);
-        if ($db !== false) {
-            $tmp = file_get_contents("../db/{$db}.db");
-            $this->db = unserialize($tmp);
-        }
     }
 
     public function __get($propriedade) {

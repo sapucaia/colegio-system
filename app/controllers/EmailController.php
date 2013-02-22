@@ -16,9 +16,9 @@ class EmailController extends Controller {
 
     function _default() {
 
-//        $emailRecord = new EmailRecord();
-//        $todos = $emailRecord->listar();
-//        $todos = serialize($todos);
+        $emailRecord = new EmailRecord();
+        $todos = $emailRecord->listar();
+        $todos = serialize($todos);
 
         include($this->PATH . 'index.php');
     }

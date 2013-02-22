@@ -44,10 +44,10 @@ if (isset($_POST['sgbd'])) {
     $config_db = include 'config/db.inc.php';
 } else {
     $config_db = include 'config/db.inc.php';
-    $args = array(1 => "db:migrate");
+//    $args = array(1 => "db:migrate");
 //    $args = array(1 => "db:migrator");
 //    $args = array(1 => "db:migrate:down");
-//    $args = array(1 => "db:generate", 2 => "add_capa_to_galeria");
+    $args = array(1 => "db:generate", 2 => "create_table_usuarios");
 }
 //$migration_dir = "../migrations";
 //$args = array(1 => "db:migrate", 2 => "distributed");

@@ -8,6 +8,7 @@
 class EmailRecord extends ManipulaBanco {
 
     private $email;
+    private $emails;
 
     public function cadastrar($email) {
         $dados['remetente'] = $email->getRemetente();
@@ -20,8 +21,8 @@ class EmailRecord extends ManipulaBanco {
     public function listar() {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDCONTATO']); $i++) {
-            $this->emails[$i] = new Email($a['IDCONTATO'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->emails[$i] = new Email($a['ID'][$i],
                             $a['REMETENTE'][$i],
                             $a['EMAIL'][$i],
                             $a['ASSUNTO'][$i],
@@ -34,7 +35,7 @@ class EmailRecord extends ManipulaBanco {
         $criteria = new TCriteria();
         $criteria->add(new TFilter("idemail", "=", $id));
         $a = $this->selecionarColecao($criteria);
-        return $email = new Email($a['IDCONTATO'][$i],
+        return $email = new Email($a['ID'][$i],
                         $a['REMETENTE'][$i],
                         $a['EMAIL'][$i],
                         $a['ASSUNTO'][$i],

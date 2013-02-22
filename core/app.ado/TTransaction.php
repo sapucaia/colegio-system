@@ -15,11 +15,11 @@ final class TTransaction {
 
     public static function open($sgbd = '', $host = '', $db = '', $user = '', $pass = '', $trans = true) {
         if (empty(self::$conn)) {
-            if ((empty($user)) and (empty($pass)) and (empty($db)) and (empty($host))) {
-                self::$conn = TConnection::open($sgbd, $host, $db, $user, $pass);
-            }else{
+//            if ((empty($user)) and (!empty($pass)) and (empty($db)) and (empty($host))) {
+//                self::$conn = TConnection::open($sgbd, $host, $db, $user, $pass);
+//            }else{
                 self::$conn = TConnection::open(DBSGBD, DBHOST, DBNAME, DBUSER, DBPASS);
-            }
+//            }
             //inicia a transa��o
             if ($trans == true) {
                 self::$conn->StartTrans();
