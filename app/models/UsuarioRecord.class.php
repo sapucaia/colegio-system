@@ -20,8 +20,8 @@ class UsuarioRecord extends ManipulaBanco {
     public function listar() {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDUSUARIO']); $i++) {
-            $this->usuarios[$i] = new Usuario($a['IDUSUARIO'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->usuarios[$i] = new Usuario($a['ID'][$i],
                             $a['NOMECOMPLETO'][$i],
                             $a['LOGIN'][$i],
                             null,
@@ -36,7 +36,7 @@ class UsuarioRecord extends ManipulaBanco {
         $criteria = new TCriteria();
         $criteria->add(new TFilter("login", "=", $login));
         $a = $this->selecionarColecao($criteria);
-        $usuario = new Usuario($a['IDUSUARIO'][1],
+        $usuario = new Usuario($a['ID'][1],
                         $a['NOMECOMPLETO'][1],
                         $a['LOGIN'][1],
                         $a['SENHA'][1],

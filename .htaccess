@@ -17,4 +17,5 @@ RewriteRule ^galeria index.php
 RewriteRule ^usuario index.php
 RewriteRule ^email index.php
 RewriteRule ^foto index.php
+RewriteRule ^login index.php
 

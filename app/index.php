@@ -1,8 +1,11 @@
 <?php
 require '../conf/lock.php';
-if (!isset($_SESSION['usuario']))
+if (empty($_SESSION['usuario'])) {
     header("Location: login");
-$usuario = unserialize($_SESSION['usuario']);
+    exit();
+} else {
+    $usuario = unserialize($_SESSION['usuario']);
+}
 ?>
 
 <!DOCTYPE html>
