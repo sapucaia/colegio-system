@@ -12,7 +12,7 @@ $todos = unserialize($todos);
 <p><a href="admMenuPrincipal">Voltar</a></p>
 <div id="corpo">
     <div>
-        <table>
+        <table id="tabela">
             <thead>
             <th>Remetente</th>
             <th>Email</th>
