@@ -17,6 +17,8 @@ if (empty($_SESSION['usuario'])) {
         <link type="text/css" rel="stylesheet" href="recursos/css/jquery.dataTables_themeroller.css"/>
         <!--<link type="text/css" rel="stylesheet" href="recursos/css/custom-theme/jquery-ui-1.9.1.custom.css"/>-->
         <link type="text/css" rel="stylesheet" href="recursos/css/smoothness/jquery-ui-1.10.1.custom.css"/>
+        <link type="text/css" rel="stylesheet" href="recursos/css/estilo.css"/>
+        
         <script type="text/javascript" src="recursos/javascript/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery-ui-1.10.1.custom.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery.dataTables.min.js"></script>

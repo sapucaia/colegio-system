@@ -1,0 +1,106 @@
+.clear{
+    clear: both;
+}
+*{
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size:15px;
+}
+
+.centralizado{
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+.formulario{
+    margin: 2px auto 2px auto;
+    width: 90%;
+}
+
+p{
+    clear: both;
+}
+
+.formulario label{
+    float: left;
+    margin-left: 5px;
+    text-align: right;
+    width: 130px;
+    line-height: 30px;
+}
+
+.formulario input, .formulario select, .formulario textarea{
+    opacity: 1;
+    resize: none;
+    border: solid 1px #CCC;
+    background: #FFFFFF;
+    margin: 5px 0 7px 5px;
+    padding: 4px;
+    font-size:14px;
+    background: 
+        -webkit-gradient(
+        linear,
+        left top,
+        left 25,
+        from(#FFFFFF),
+        color-stop(4%, #EEEEEE),
+        to(#FFFFFF)
+        );
+    background: 
+        -moz-linear-gradient(
+        top,
+        #FFFFFF,
+        #EEEEEE 1px,
+        #FFFFFF 25px
+        );
+    -moz-box-shadow: 0px 0px 8px #f0f0f0;
+    -webkit-box-shadow: 0px 0px 8px #f0f0f0;
+    box-shadow: 0px 0px 8px #f0f0f0;
+}
+
+.formulario input[type="text"],.formulario input[type="password"],.formulario select,.formulario textarea{
+    width: 250px;
+}
+
+.formulario input[type="submit"],.formulario input[type="reset"]{
+    width: 80px;
+
+}
+
+.formulario form input[type='submit']:focus,
+.formulario form input[type='submit']:hover,
+.formulario form input[type='reset']:focus,
+.formulario form input[type='reset']:hover{
+    border: solid 1px #2183c4;
+}
+
+.formulario label.error { 
+    float: none; 
+    color: red; 
+    padding-left: 10px; 
+    vertical-align: top; 
+}
+
+.formulario #botoes{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.formulario .rotulo{
+    font-size: 16px;
+    float: left;
+    margin-left: 5px; 
+    width: 180px;
+    text-align: right;
+}
+
+
+.formulario #links{
+    text-align: center;
+}
+
