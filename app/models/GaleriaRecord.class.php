@@ -18,8 +18,8 @@ class GaleriaRecord extends ManipulaBanco{
     public function listar(){
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDGALERIA']); $i++) {
-            $this->galerias[$i] = new Galeria($a['IDGALERIA'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->galerias[$i] = new Galeria($a['ID'][$i],
                             $a['NOMEGALERIA'][$i],
                             $a['DATAGALERIA'][$i],
                             $a['CAPA'][$i]);

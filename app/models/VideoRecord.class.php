@@ -20,8 +20,8 @@ class VideoRecord extends ManipulaBanco {
     public function listar() {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDVIDEO']); $i++) {
-            $this->videos[$i] = new Video($a['IDVIDEO'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->videos[$i] = new Video($a['ID'][$i],
                             $a['TITULO'][$i],
                             $a['URL'][$i]);
         }
@@ -30,14 +30,14 @@ class VideoRecord extends ManipulaBanco {
 
     public function getVideo($id) {
         $criteria = new TCriteria();
-        $criteria->add(new TFilter("idvideo", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
-        return $video = new Video($a['IDVIDEO'][1], $a['TITULO'][1], $a['URL'][1]);
+        return $video = new Video($a['ID'][1], $a['TITULO'][1], $a['URL'][1]);
     }
 
     public function removerVideo($id) {
         $criteria = new TCriteria;
-        $criteria->add(new TFilter("idvideo", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $this->deletar($criteria);
         return true;
     }

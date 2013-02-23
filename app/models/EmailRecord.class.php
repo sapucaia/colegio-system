@@ -33,7 +33,7 @@ class EmailRecord extends ManipulaBanco {
 
     public function getEmail($id) {
         $criteria = new TCriteria();
-        $criteria->add(new TFilter("idemail", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
         return $email = new Email($a['ID'][$i],
                         $a['REMETENTE'][$i],
@@ -44,7 +44,7 @@ class EmailRecord extends ManipulaBanco {
 
     public function removerEmail($id) {
         $criteria = new TCriteria;
-        $criteria->add(new TFilter("idemail", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $this->deletar($criteria);
         return true;
     }

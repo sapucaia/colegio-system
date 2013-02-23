@@ -39,7 +39,7 @@ class EmailController extends Controller {
         $email = new Email;
         $email->setRemetente($form['remetente']);
         $email->setEmail($form['email']);
-        $email->setAsssunto($form['assunto']);
+        $email->setAssunto($form['assunto']);
         $email->setMensagem($form['mensagem']);
         $emailRecord = new EmailRecord;
         if ($emailRecord->cadastrar($email)) {
@@ -49,7 +49,7 @@ class EmailController extends Controller {
         } else {
             $str = 'Erro! Email não salvo';
             $str = serialize($str);
-            include ('../../app/views/email/feedback.php');
+            include ('app/views/email/feedback.php');
         }
     }
 

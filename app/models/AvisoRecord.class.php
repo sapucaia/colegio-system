@@ -28,14 +28,14 @@ class AvisoRecord extends ManipulaBanco {
 
     public function getAviso($id) {
         $criteria = new TCriteria();
-        $criteria->add(new TFilter("idaviso", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
-        return $aviso = new Aviso($a['IDAVISO'][1], $a['DATA'][1], $a['AVISO'][1]);
+        return $aviso = new Aviso($a['ID'][1], $a['DATA'][1], $a['AVISO'][1]);
     }
 
     public function removerAviso($id) {
         $criteria = new TCriteria;
-        $criteria->add(new TFilter("idaviso", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $this->deletar($criteria);
         return true;
     }

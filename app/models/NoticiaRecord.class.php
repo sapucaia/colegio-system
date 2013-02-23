@@ -18,8 +18,8 @@ class NoticiaRecord extends ManipulaBanco{
     public function listar() {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDNOTICIA']); $i++) {
-            $this->noticias[$i] = new Noticia($a['IDNOTICIA'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->noticias[$i] = new Noticia($a['ID'][$i],
                             $a['DATA'][$i],
                             $a['TITULO'][$i],
                             $a['NOTICIA'][$i]);
@@ -29,14 +29,14 @@ class NoticiaRecord extends ManipulaBanco{
     
     public function getNoticia($id) {
         $criteria = new TCriteria();
-        $criteria->add(new TFilter("idnoticia", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
-        return $noticia = new Noticia($a['IDNOTICIA'][1], $a['DATA'][1], $a['TITULO'][1], $a['NOTICIA'][1]);
+        return $noticia = new Noticia($a['ID'][1], $a['DATA'][1], $a['TITULO'][1], $a['NOTICIA'][1]);
     }
 
     public function removerNoticia($id) {
         $criteria = new TCriteria;
-        $criteria->add(new TFilter("idnoticia", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $this->deletar($criteria);
         return true;
     }

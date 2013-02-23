@@ -13,7 +13,7 @@ class Email {
     private $assunto;
     private $mensagem;
 
-    public function __construct($idEmail, $remetente, $email, $assunto, $mensagem) {
+    public function __construct($idEmail=null, $remetente=null, $email=null, $assunto=null, $mensagem=null) {
         $this->idEmail = $idEmail;
         $this->remetente = $remetente;
         $this->email = $email;

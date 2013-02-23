@@ -27,8 +27,8 @@ class FotoRecord extends ManipulaBanco {
     public function listar() {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDFOTO']); $i++) {
-            $this->fotos[$i] = new Foto($a['IDFOTO'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->fotos[$i] = new Foto($a['ID'][$i],
                             $a['GALERIAID'][$i],
                             $a['FOTO'][$i],
                             $a['URL'][$i],
@@ -43,8 +43,8 @@ class FotoRecord extends ManipulaBanco {
         $criteria = new TCriteria();
         $criteria->add(new TFilter("galeriaid", "=", $idGaleria));
         $a = $this->selecionarColecao($criteria);
-        for ($i = 1; $i <= count($a['IDFOTO']); $i++) {
-            $this->fotos[$i] = new Foto($a['IDFOTO'][$i],
+        for ($i = 1; $i <= count($a['ID']); $i++) {
+            $this->fotos[$i] = new Foto($a['ID'][$i],
                             $a['GALERIAID'][$i],
                             $a['FOTO'][$i],
                             $a['URL'][$i],
@@ -57,10 +57,10 @@ class FotoRecord extends ManipulaBanco {
 
     public function getFoto($id) {
         $criteria = new TCriteria();
-        $criteria->add(new TFilter("idfoto", "=", $id));
+        $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
 
-        $foto = new Foto($a['IDFOTO'][1],
+        $foto = new Foto($a['ID'][1],
                         $a['GALERIAID'][1],
                         $a['FOTO'][1],
                         $a['URL'][1],
