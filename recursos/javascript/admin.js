@@ -45,5 +45,23 @@ $(function() {
         });
         event.preventDefault();
     });
+    $(document).on("click",".link_remover",function(e){
+        var $this = $(this);
+        var href = $this.attr("href");
+        var url = href.split("/");
+//        alert(url[0]);
+//        alert(url[2]);
+        $.ajax({
+            url:"app/remover.php",
+            data: {
+                model:url[0], 
+                id:url[2]
+            },
+            success:function(data){
+                alert(data);
+            }
+        });
+        e.preventDefault();
+    }); 
 });
 

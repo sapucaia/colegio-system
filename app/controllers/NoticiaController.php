@@ -39,11 +39,11 @@ class NoticiaController extends Controller {
         $noticia->setTitulo($form['titulo']);
         $noticia->setNoticia($form['noticia']);
         $noticiaRecord = new NoticiaRecord;
-        if($noticiaRecord->cadastrar($noticia)){
+        if ($noticiaRecord->cadastrar($noticia)) {
             $str = 'Noticia salva com sucesso total!';
             $str = serialize($str);
             include ('app/views/noticia/feedback.php');
-        }  else {
+        } else {
             $str = 'Erro! Noticia não salva';
             $str = serialize($str);
             include ('../../app/views/noticia/feedback.php');
@@ -57,49 +57,46 @@ class NoticiaController extends Controller {
         include('app/views/noticia/mostrar.php');
     }
 
-      function _editar() {
+    function _editar() {
         $noticiaRecord = new NoticiaRecord;
         $aux = $this->Command->getParameters();
         $objeto = $noticiaRecord->getNoticia($aux[0]);
         $objeto = serialize($objeto);
 //        print_r($objeto);
-        include('app/views/noticia/editar.php'); 
+        include('app/views/noticia/editar.php');
     }
 
-
     function _remover() {
-        $form = $_POST;
-        $noticiaRecord  = new NoticiaRecord;
 
-        if($noticiaRecord->removerNoticia($form['idnoticia'])){
+        $noticiaRecord = new NoticiaRecord;
+        $id = $this->Command->getParameters(); 
+        if ($noticiaRecord->removerNoticia($id[0])) {
             $str = 'Remo&ccedil;&atilde;o de noticia realizada com sucesso';
             $str = serialize($str);
             include ('app/views/noticia/feedback.php');
-        }  else {
+        } else {
             $str = 'Falha ao tentar remover a noticia';
             $str = serialize($str);
             include ('app/views/noticia/feedback.php');
         }
-        
     }
-    
-    function _atualizar(){
+
+    function _atualizar() {
         $form = $_POST;
 //        print_r($form);
         $noticiaRecord = new NoticiaRecord();
         $dados['noticia'] = $form['noticia'];
-        if($noticiaRecord->atualizar($dados, $form['idnoticia'])){
+        if ($noticiaRecord->atualizar($dados, $form['idnoticia'])) {
             $str = 'Atualiza&ccedil;&atilde;o de noticia realizada com sucesso ';
             $str = serialize($str);
             include ('app/views/noticia/feedback.php');
-        }  else {
+        } else {
             $str = 'Falha ao tentar atualizar';
             $str = serialize($str);
             include ('app/views/noticia/feedback.php');
         }
-                
-        
     }
 
 }
+
 ?>

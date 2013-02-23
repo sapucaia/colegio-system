@@ -1,21 +1,21 @@
 <?php $objeto = unserialize($objeto) ?>
-        <form action="../atualizar" method="POST">
+<form action="../atualizar" method="POST">
 
-            <textarea name="aviso"><?php echo '' . $objeto->getAviso(); ?></textarea>
-            <input type="hidden" name="idaviso" value="<?php echo "" . $objeto->getIdAviso(); ?>">
+    <textarea name="aviso"><?php echo '' . $objeto->getAviso(); ?></textarea>
+    <input type="hidden" name="idaviso" value="<?php echo "" . $objeto->getIdAviso(); ?>">
 
-            <input type="submit" value="Atualizar">
+    <input type="submit" value="Atualizar">
 
-        </form>
-        
-        
-        <form action="../remover" method="POST">
-            
-            <input type="hidden" name="idaviso" value="<?php echo "".$objeto->getIdAviso(); ?>">
-            <input type="submit" value="Remover aviso" >
-        </form>
-        
-        <li><a href="../../aviso">Voltar</a></li>  
-        
-    
+</form>
+
+
+
+
+<a href="noticia/remover/<?php echo "" . $objeto->getIdAviso(); ?>" >Remover</a>
+
+
+
+
+
+
 

@@ -19,7 +19,7 @@ final class TConnection {
     public static function open($sgbd = '', $host = '', $db = '', $user = '', $pass = '') {
         $conn = ADONewConnection($sgbd);
         TConnection::$db = $sgbd;
-        $conn->debug = false; // coloca o debug como ativo
+        $conn->debug = true; // coloca o debug como ativo
 
         if ((empty($user)) and (empty($pass)) and (empty($db)) and (empty($host))) {
             if ($sgbd !== "oci8") {

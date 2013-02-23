@@ -12,6 +12,8 @@ $todos = $noticiaRecord->listar();
         <th>Not&iacute;cia</th>
         <th>Data</th>
         <th>T&iacute;tulo</th>
+        <th></th>
+        <th></th>
 
         </thead>
         <tbody>
@@ -21,6 +23,8 @@ $todos = $noticiaRecord->listar();
                     <td><?php echo "<a href=noticia/editar/" . $noticia->getIdNoticia() . ">" . $noticia->getNoticia() . "</a>"; ?></td>
                     <td><?php echo $noticia->getDataNoticia(); ?></td>
                     <td><?php echo $noticia->getTitulo(); ?></td>
+                    <td></td>
+                    <td><a class="link_remover" href="noticia/remover/<?php echo "" . $noticia->getIdNoticia(); ?>" >Remover</a></td>
 
                 </tr>
             <?php } ?>

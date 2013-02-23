@@ -34,7 +34,7 @@ class NoticiaRecord extends ManipulaBanco{
         return $noticia = new Noticia($a['ID'][1], $a['DATA'][1], $a['TITULO'][1], $a['NOTICIA'][1]);
     }
 
-    public function removerNoticia($id) {
+    public function remover($id) {
         $criteria = new TCriteria;
         $criteria->add(new TFilter("id", "=", $id));
         $this->deletar($criteria);
