@@ -17,13 +17,17 @@ $todos = $avisoRecord->listar();
         <thead>
         <th>Aviso</th>
         <th>Data</th>
+        <th></th>
+        <th></th>
 
         </thead>
         <tbody>
             <?php foreach ($todos as $aviso) { ?>
-                <tr>
+                <tr id="noticia<?php echo "" . $aviso->getIdAviso(); ?>">
                     <td><?php echo "<a href=aviso/editar/" . $aviso->getIdAviso() . ">" . $aviso->getAviso() . "</a>"; ?></td>
                     <td><?php echo $aviso->getData(); ?></td>
+                    <td><</td>
+                    <td><a class="link_remover" href="aviso/remover/<?php echo "" . $aviso->getIdAviso(); ?>" >Remover</a></td>
                 </tr>
             <?php } ?>
         </tbody>

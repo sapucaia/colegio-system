@@ -49,19 +49,56 @@ $(function() {
         var $this = $(this);
         var href = $this.attr("href");
         var url = href.split("/");
-//        alert(url[0]);
-//        alert(url[2]);
-        $.ajax({
-            url:"app/remover.php",
-            data: {
-                model:url[0], 
-                id:url[2]
-            },
-            success:function(data){
-                alert(data);
+        var outputHolder = $("<div id='.uimodal-output'>Tem certeza que deseja remover o(a) "+url[0]+"? </div>");
+        $("body").append(outputHolder);
+        outputHolder.dialog({
+            
+            resizable: false,
+            height:180,
+            width:350,
+            modal: true,
+            buttons: {
+                "Deletar": function() {
+                    $.ajax({
+                        type: "GET",
+                        url:"app/remover.php",
+                        data: {
+                            model:url[0], 
+                            id:url[2]
+                        },
+                        success:function(data){
+                            window.location.reload();
+                        }
+                    });
+                    $( this ).dialog( "close" );
+
+                },
+                Cancel: function() {
+                    $( this ).dialog( "close" );
+                }
             }
         });
+        
         e.preventDefault();
     }); 
+    $(document).on("click",".link_salvar",function(e){
+        var form = $("form");
+     $.ajax({
+         type: "POST",
+         url:"app/salvar.php",
+         data:{
+             dados: $(form).serialize(),
+             model: $('model_name').val()
+         },
+         success:function(data){
+             alert(data);
+         }
+     });
+    
+    
+    
+    e.preventDefault();
+        })
+    
 });
 
