@@ -8,13 +8,13 @@
 class Aviso {
 
     private $idAviso;
-    private $data;
     private $aviso;
+    private $data;
 
-    public function __construct($idAviso, $data, $aviso) {
+    public function __construct($idAviso, $aviso, $data) {
         $this->idAviso = $idAviso;
-        $this->data = $data;
         $this->aviso = $aviso;
+        $this->data = $data;
     }
 
     public function getIdAviso() {

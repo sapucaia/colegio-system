@@ -8,11 +8,11 @@
 class Noticia {
 
     private $idNoticia;
-    private $dataNoticia;
     private $titulo;
     private $noticia;
+    private $dataNoticia;
 
-    function __construct($idNoticia, $dataNoticia, $titulo, $noticia) {
+    function __construct($idNoticia, $titulo, $noticia, $dataNoticia) {
         $this->idNoticia = $idNoticia;
         $this->dataNoticia = $dataNoticia;
         $this->titulo = $titulo;

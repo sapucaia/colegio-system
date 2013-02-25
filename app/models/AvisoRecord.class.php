@@ -19,9 +19,7 @@ class AvisoRecord extends ManipulaBanco {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
         for ($i = 1; $i <= count($a['ID']); $i++) {
-            $this->avisos[$i] = new Aviso($a['ID'][$i],
-                            $a['DATA'][$i],
-                            $a['AVISO'][$i]);
+            $this->avisos[$i] = new Aviso($a['ID'][$i], $a['AVISO'][$i], $a['DATA'][$i]);
         }
         return $this->avisos;
     }
@@ -31,6 +29,13 @@ class AvisoRecord extends ManipulaBanco {
         $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
         return $aviso = new Aviso($a['ID'][1], $a['DATA'][1], $a['AVISO'][1]);
+    }
+
+    public function find_by_id($id) {
+        $criteria = new TCriteria();
+        $criteria->add(new TFilter("id", "=", $id));
+        $a = $this->selecionarColecao($criteria);
+        return $aviso = new Aviso($a['ID'][1], $a['AVISO'][1], $a['DATA'][1]);
     }
 
     public function remover($id) {

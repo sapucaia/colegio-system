@@ -161,7 +161,8 @@ abstract class ManipulaBanco extends TRecord {
                 }
 
             case "postgres": {
-                    $sql = "SELECT CURRVAL('" . $sequencia . "') AS ultimoId";
+                    $sql = "SELECT CURRVAL('" . $this->getEntity() . "_id_seq') AS ultimoId";
+//                    $sql = "SELECT CURRVAL(pg_get_serial_sequence('{$this->getEntity()}','id')) as ULTIMO_ID";
                     $result = $this->executarPesquisa($sql);
 
                     return $result['ULTIMOID']['1'];

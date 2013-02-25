@@ -26,7 +26,7 @@ function mudaStatus($recado) {
 </div>
 <p><a href="admMenuPrincipal">Voltar</a></p>-->
 <div id="corpo">
-    <table id="myTable" class="tablesorter">
+    <table class="tablesorter">
         <thead>
         <th>Remetente</th>
         <th>Destinat&aacute;rio</th>

@@ -6,13 +6,12 @@ $todos = $emailRecord->listar();
 ?>
 <!--<div style="clear:both;"></div>-->
 <div id="corpo">
-    <table id="tabela" class="tablesorter">
+    <table class="tablesorter tableEmail">
         <thead>
         <th>Remetente</th>
         <th>Email</th>
         <th>Assunto</th>
         <th>Mensagem</th>
-
         <th></th>
         <th></th>
         </thead>
@@ -23,8 +22,8 @@ $todos = $emailRecord->listar();
                     <td><?php echo $email->getEmail(); ?></td>
                     <td><?php echo $email->getAssunto(); ?></td>
                     <td><?php echo $email->getMensagem(); ?></td>
-                    <td>Editar</td>
-                    <td>Remover</td>
+                    <td></td>
+                    <td><a class="link_remover" href="email/remover/<?php echo $email->getIdEmail(); ?>">Remover</a></td>
                 </tr>
             <?php } ?>
         </tbody>

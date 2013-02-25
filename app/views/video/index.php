@@ -22,7 +22,7 @@ $todos = $videoRecord->listar();
         </div>
         <p><a href="admMenuPrincipal">Voltar</a></p>-->
 <div id="corpo">
-    <table id="myTable" class="tablesorter">
+    <table class="tablesorter">
         <thead>
         <th>T&iacute;tulo</th>
         <th>URL</th>

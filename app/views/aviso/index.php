@@ -13,7 +13,7 @@ $todos = $avisoRecord->listar();
     </div>
     <p><a href="admMenuPrincipal">Voltar</a></p>-->
 <div id="corpo">
-    <table id="myTable" class="tablesorter">
+    <table class="tablesorter tableAviso">
         <thead>
         <th>Aviso</th>
         <th>Data</th>
@@ -26,8 +26,8 @@ $todos = $avisoRecord->listar();
                 <tr id="noticia<?php echo "" . $aviso->getIdAviso(); ?>">
                     <td><?php echo "<a href=aviso/editar/" . $aviso->getIdAviso() . ">" . $aviso->getAviso() . "</a>"; ?></td>
                     <td><?php echo $aviso->getData(); ?></td>
-                    <td><</td>
-                    <td><a class="link_remover" href="aviso/remover/<?php echo "" . $aviso->getIdAviso(); ?>" >Remover</a></td>
+                    <td></td>
+                    <td><a class="link_remover" href="aviso/remover/<?php echo "" . $aviso->getIdAviso(); ?>">Remover</a></td>
                 </tr>
             <?php } ?>
         </tbody>

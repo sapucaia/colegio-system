@@ -15,6 +15,7 @@ if (empty($_SESSION['usuario'])) {
         <!--<link href="recursos/css/tabela.css" type="text/css" rel="stylesheet"/>-->
         <link type="text/css" rel="stylesheet" href="recursos/css/jquery.dataTables.css"/>
         <link type="text/css" rel="stylesheet" href="recursos/css/jquery.dataTables_themeroller.css"/>
+        <link type="text/css" rel="stylesheet" href="recursos/css/jquery.jgrowl.css"/>
         <!--<link type="text/css" rel="stylesheet" href="recursos/css/custom-theme/jquery-ui-1.9.1.custom.css"/>-->
         <link type="text/css" rel="stylesheet" href="recursos/css/smoothness/jquery-ui-1.10.1.custom.css"/>
         <link type="text/css" rel="stylesheet" href="recursos/css/estilo.css"/>
@@ -22,9 +23,11 @@ if (empty($_SESSION['usuario'])) {
         <script type="text/javascript" src="recursos/javascript/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery-ui-1.10.1.custom.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="recursos/javascript/jquery.jgrowl.js"></script>
+        <script type="text/javascript" src="recursos/javascript/jquery.blockUI.js"></script>
         <script type="text/javascript" src="recursos/javascript/admin.js"></script>
-        <script type="text/javascript" src="recursos/javascript/carregamentoPaginaAdm.js"></script>
-        <title></title>
+        <!--<script type="text/javascript" src="recursos/javascript/carregamentoPaginaAdm.js"></script>-->
+        <title>Colegio System - Admin</title>
     </head>
     <body>
         Ol&aacute;&nbsp;<?php echo $usuario->getNomeCompleto(); ?>
@@ -32,7 +35,7 @@ if (empty($_SESSION['usuario'])) {
         <div id="tabs">
             <ul>
                 <li><a href="#tabAvisos">Avisos</a></li>
-                <li><a href="#tabEmails">Emails</a></li>
+                <li><a href="#tabEmails">Emails Recebidos</a></li>
                 <li><a href="#tabFotos">Fotos</a></li>
                 <li><a href="#tabNoticias">Noticias</a></li>
                 <li><a href="#tabRecados">Recados</a></li>

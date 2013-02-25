@@ -22,11 +22,7 @@ class EmailRecord extends ManipulaBanco {
         $criteria = new TCriteria();
         $a = $this->selecionarColecao($criteria);
         for ($i = 1; $i <= count($a['ID']); $i++) {
-            $this->emails[$i] = new Email($a['ID'][$i],
-                            $a['REMETENTE'][$i],
-                            $a['EMAIL'][$i],
-                            $a['ASSUNTO'][$i],
-                            $a['MENSAGEM'][$i]);
+            $this->emails[$i] = new Email($a['ID'][$i], $a['REMETENTE'][$i], $a['EMAIL'][$i], $a['ASSUNTO'][$i], $a['MENSAGEM'][$i]);
         }
         return $this->emails;
     }
@@ -35,14 +31,17 @@ class EmailRecord extends ManipulaBanco {
         $criteria = new TCriteria();
         $criteria->add(new TFilter("id", "=", $id));
         $a = $this->selecionarColecao($criteria);
-        return $email = new Email($a['ID'][$i],
-                        $a['REMETENTE'][$i],
-                        $a['EMAIL'][$i],
-                        $a['ASSUNTO'][$i],
-                        $a['MENSAGEM'][$i]);
+        return $email = new Email($a['ID'][$i], $a['REMETENTE'][$i], $a['EMAIL'][$i], $a['ASSUNTO'][$i], $a['MENSAGEM'][$i]);
     }
 
-    public function removerEmail($id) {
+    public function find_by_id($id) {
+        $criteria = new TCriteria();
+        $criteria->add(new TFilter("id", "=", $id));
+        $a = $this->selecionarColecao($criteria);
+        return $email = new Email($a['ID'][1], $a['REMETENTE'][1], $a['EMAIL'][1], $a['ASSUNTO'][1], $a['MENSAGEM'][1]);
+    }
+
+    public function remover($id) {
         $criteria = new TCriteria;
         $criteria->add(new TFilter("id", "=", $id));
         $this->deletar($criteria);

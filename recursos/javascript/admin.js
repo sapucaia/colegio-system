@@ -1,9 +1,12 @@
 $(function() {
-    $("#tabs").tabs({
-        select: function(event, ui) {
-        }
+    
+    $(document).ajaxStart(function(){
+//       alert("Requisicao") ;
+       $.blockUI({ message: '<h1><img src="recursos/imagens/ajax-loader.gif" /> Perae misere...</h1>' }); 
     });
-    $(".tablesorter").dataTable({
+    $(document).ajaxStop($.unblockUI);
+    
+    var tableOptions = {
         "bJQueryUI": true,
         "oLanguage": {
             "sProcessing": "Processando...",
@@ -22,6 +25,13 @@ $(function() {
                 "sLast": "Último"
             }
         }
+    };
+
+    $("#tabs").tabs();
+
+    var tables = [];
+    $("#tabs").find("table").each(function() {
+        tables.push($(this).dataTable(tableOptions));
     });
     $(".command > a").button({
         icons: {
@@ -29,76 +39,113 @@ $(function() {
         }
     }).click(function(event) {
         var $this = $(this);
-        var outputHolder = $("<div id='.uimodal-output'></div>");
+        var outputHolder = $("<div id='uimodal-output'></div>");
         $("body").append(outputHolder);
         outputHolder.load($this.attr("href"), null, function() {
+            $("input[type='submit']").hide();
+            var form = $("form");
+            var model = $(form).attr('action').split("/");
+            model = model[0];
             $("input[type='submit'], input[type='reset']").button({
                 icons: {
                     secondary: "ui-icon-circle-plus"
                 }
             });
+
             outputHolder.dialog({
                 height: 500,
                 width: 600,
-                modal: true
+                modal: true,
+                buttons: {
+                    "Salvar": function() {
+                        var row = [];
+                        $.ajax({
+                            type: "POST",
+                            url: "app/salvar.php",
+//                            context: $(this).parent().find(".ui-dialog"),
+                            dataType: "json",
+                            async: false,
+                            data: {
+                                dados: $(form).serialize(),
+                                model: model
+                            },
+                            success: function(data) {
+//                              
+                                $.each(data, function(key, val) {
+                                    if (val === null) {
+                                        row.push("");
+                                    } else {
+                                        row.push(val);
+                                    }
+//                                    alert(val);
+                                });
+//                                alert($(button).parents().find(".tableAviso").text());
+//                                alert(row);
+                                var tabela = ".table";
+                                model = model.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+                                    return letter.toUpperCase();
+                                });
+//                                alert(tabela + model);
+                                $(tabela + model).dataTable().fnAddData(row);
+//                              
+                            },
+                            error: function(data) {
+                                alert("data.toString()");
+                            }
+//                       
+                        });
+                        $(this).dialog("close");
+                        $.jGrowl(model + " adicionado com sucesso!");
+
+                    }}
             });
         });
         event.preventDefault();
     });
-    $(document).on("click",".link_remover",function(e){
+    $(document).on("click", ".link_remover", function(e) {
+        var nRow = $(this).parents('tr')[0];
         var $this = $(this);
         var href = $this.attr("href");
         var url = href.split("/");
-        var outputHolder = $("<div id='.uimodal-output'>Tem certeza que deseja remover o(a) "+url[0]+"? </div>");
+        var model = url[0];
+        var outputHolder = $("<div id='.uimodal-output'>Tem certeza que deseja remover o(a) " + model + "? </div>");
         $("body").append(outputHolder);
+//        alert(nRow);
         outputHolder.dialog({
-            
             resizable: false,
-            height:180,
-            width:350,
+            height: 180,
+            width: 350,
             modal: true,
-            buttons: {
-                "Deletar": function() {
+            async: false,
+            buttons: {"Deletar": function() {
                     $.ajax({
                         type: "GET",
-                        url:"app/remover.php",
+                        url: "app/remover.php",
                         data: {
-                            model:url[0], 
-                            id:url[2]
+                            model: model,
+                            id: url[2]
                         },
-                        success:function(data){
-                            window.location.reload();
+                        success: function(data) {
+                            var tabela = ".table";
+                            model = model.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+                                return letter.toUpperCase();
+                            });
+                            $(tabela + model).dataTable().fnDeleteRow(nRow);
+
                         }
                     });
-                    $( this ).dialog( "close" );
+                    $(this).dialog("close");
+                    $.jGrowl(model + " removido com sucesso!");
 
                 },
                 Cancel: function() {
-                    $( this ).dialog( "close" );
+                    $(this).dialog("close");
                 }
             }
         });
-        
+
         e.preventDefault();
-    }); 
-    $(document).on("click",".link_salvar",function(e){
-        var form = $("form");
-     $.ajax({
-         type: "POST",
-         url:"app/salvar.php",
-         data:{
-             dados: $(form).serialize(),
-             model: $('model_name').val()
-         },
-         success:function(data){
-             alert(data);
-         }
-     });
-    
-    
-    
-    e.preventDefault();
-        })
-    
+    });
+
 });
 
