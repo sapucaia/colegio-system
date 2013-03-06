@@ -10,6 +10,7 @@ Autoloader::setClassFileSuffix('.php');
 Autoloader::setClassPaths(array(
     APP_PATH . 'core/adodb5/',
     APP_PATH . 'core/app.ado/',
+    APP_PATH . 'core/image/',
     APP_PATH . 'core/dispatcher/',
     APP_PATH . 'migration/action/',
     APP_PATH . 'migration/adapters/',

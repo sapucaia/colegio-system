@@ -1,11 +1,15 @@
 $(function() {
-    
-    $(document).ajaxStart(function(){
-//       alert("Requisicao") ;
-       $.blockUI({ message: '<h1><img src="recursos/imagens/ajax-loader.gif" /> Perae misere...</h1>' }); 
+
+    'use strict';
+
+    // Initialize the jQuery File Upload widget:
+
+
+    $(document).ajaxStart(function() {
+        $.blockUI({message: '<h1><img src="recursos/imagens/ajax-loader.gif" /> Aguarde...</h1>'});
     });
     $(document).ajaxStop($.unblockUI);
-    
+
     var tableOptions = {
         "bJQueryUI": true,
         "oLanguage": {
@@ -42,8 +46,9 @@ $(function() {
         var outputHolder = $("<div id='uimodal-output'></div>");
         $("body").append(outputHolder);
         outputHolder.load($this.attr("href"), null, function() {
-            $("input[type='submit']").hide();
+            $("input[type='submit'],input[type='reset']").hide();
             var form = $("form");
+            alert($(form).serialize());
             var model = $(form).attr('action').split("/");
             model = model[0];
             $("input[type='submit'], input[type='reset']").button({
@@ -51,10 +56,11 @@ $(function() {
                     secondary: "ui-icon-circle-plus"
                 }
             });
-
             outputHolder.dialog({
                 height: 500,
-                width: 600,
+                width: 'auto',
+                position: ['center', 'center'],
+//                "resize", "auto",
                 modal: true,
                 buttons: {
                     "Salvar": function() {
@@ -70,14 +76,12 @@ $(function() {
                                 model: model
                             },
                             success: function(data) {
-//                              
                                 $.each(data, function(key, val) {
                                     if (val === null) {
                                         row.push("");
                                     } else {
                                         row.push(val);
                                     }
-//                                    alert(val);
                                 });
 //                                alert($(button).parents().find(".tableAviso").text());
 //                                alert(row);
@@ -87,20 +91,22 @@ $(function() {
                                 });
 //                                alert(tabela + model);
                                 $(tabela + model).dataTable().fnAddData(row);
-//                              
                             },
                             error: function(data) {
                                 alert("data.toString()");
                             }
-//                       
                         });
                         $(this).dialog("close");
                         $.jGrowl(model + " adicionado com sucesso!");
-
-                    }}
+                    }},
+                close: function() {
+                    $(this).dialog("close");
+                    $(this).remove();//have do destroy dynamic element
+                }
             });
         });
         event.preventDefault();
+
     });
     $(document).on("click", ".link_remover", function(e) {
         var nRow = $(this).parents('tr')[0];
@@ -110,7 +116,6 @@ $(function() {
         var model = url[0];
         var outputHolder = $("<div id='.uimodal-output'>Tem certeza que deseja remover o(a) " + model + "? </div>");
         $("body").append(outputHolder);
-//        alert(nRow);
         outputHolder.dialog({
             resizable: false,
             height: 180,
@@ -131,21 +136,17 @@ $(function() {
                                 return letter.toUpperCase();
                             });
                             $(tabela + model).dataTable().fnDeleteRow(nRow);
-
                         }
                     });
                     $(this).dialog("close");
                     $.jGrowl(model + " removido com sucesso!");
-
                 },
                 Cancel: function() {
                     $(this).dialog("close");
                 }
             }
         });
-
         e.preventDefault();
     });
-
 });
 
