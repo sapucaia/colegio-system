@@ -1,6 +1,8 @@
 <link type="text/css" rel="stylesheet" href="recursos/css/styleForm.css"/>
 <script type="text/javascript" src="recursos/javascript/modernizr.custom.63321.js"></script>
-<p><img src="../../../recursos/imagens/logo.gif" width="300" height="100"/></p>
+<div id="logo"><img src="recursos/imagens/logo.gif" width="400" height="130"></div>
+
+<div id="formLogin">
 <form action="login/logar" class="form-1" method="POST">
     <p class="field">
         <!--<label for="login">Login</label>-->
@@ -17,3 +19,4 @@
         <!--<input type="submit" value="Entrar">-->
     </p>
 </form>
+</div>
