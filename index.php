@@ -36,6 +36,7 @@
         
     </head>
     <body>
+        
         <?php
         define('APP_PATH', './');
         require 'core/autoload.php';

@@ -21,20 +21,25 @@ if (empty($_SESSION['usuario'])) {
         <link type="text/css" rel="stylesheet" href="recursos/css/estilo.css"/>
         <link type="text/css" rel="stylesheet" href="recursos/adm.css"/>
         <link type="text/css" rel="stylesheet" href="recursos/css/validate.css"/>
+        <!--<link type="text/css" rel="stylesheet" href="recursos/css/styleForm.css"/>-->
 
         <script type="text/javascript" src="recursos/javascript/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery-ui-1.10.1.custom.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery.jgrowl.js"></script>
         <script type="text/javascript" src="recursos/javascript/jquery.blockUI.js"></script>
-        <script type="text/javascript" src="recursos/javascript/jquery.validate.js"></script>
-        <script type="text/javascript" src="recursos/javascript/validacao.js"></script>
         <script type="text/javascript" src="recursos/javascript/admin.js"></script>
+        <!--<script type="text/javascript" src="recursos/javascript/modernizr.custom.63321.js"></script>-->
+        
         
         <!--<script type="text/javascript" src="recursos/javascript/carregamentoPaginaAdm.js"></script>-->
         <title>Colegio System - Admin</title>
     </head>
     <body>
+<!--        <form id="formulario">
+            <input type="text"  name="campo_aviso" required="true"/>
+        <input type="submit" value="ok"/>
+        </form>-->
         <div id="tabela_conteudo">
             <div id="topo">
                 <h2>Colegio system - &Aacute;rea administrativa</h2>  
